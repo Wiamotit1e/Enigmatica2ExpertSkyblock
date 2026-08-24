@@ -115,7 +115,7 @@ mods.nuclearcraft.melter.addRecipe(<ore:obsidian>, <liquid:obsidian> * 144);
 scripts.process.crush(<minecraft:end_stone>, <nuclearcraft:gem_dust:11>, "except: manufactory", null, null);
 
 # HSLA ingots
-scripts.process.alloy([<ore:ingotIron> * 15, <ore:dustCarbonManganese>], <ore:ingotHSLASteel>.firstItem * 16, "except: alloyFurnace");
+scripts.process.alloy([<ore:ingotIron> * 15, <contenttweaker:thermal_prism>], <ore:ingotHSLASteel>.firstItem * 16, "no exceptions");
 
 # S'More ingredients processing
 scripts.process.extract(<minecraft:porkchop>, <nuclearcraft:gelatin> * 8, "except: manufactory");

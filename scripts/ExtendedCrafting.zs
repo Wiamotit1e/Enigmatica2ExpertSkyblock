@@ -23,25 +23,9 @@ import mods.jei.JEI.removeAndHide as rh;
 	[<ore:nuggetBlackIron>, <ore:nuggetBlackIron>, <ore:nuggetBlackIron>]]);
 	
 	mods.thermalexpansion.InductionSmelter.addRecipe
-	(<extendedcrafting:material> * 3, 
-	<thermalfoundation:storage_alloy:2>, <immersiveengineering:stone_decoration:3>, 50000);
-	
-	mods.thermalexpansion.InductionSmelter.addRecipe
-	(<extendedcrafting:material> * 2, 
-	<thermalfoundation:storage_alloy:2>, <actuallyadditions:block_misc:2>, 20000);
-	
-	mods.thermalexpansion.InductionSmelter.addRecipe
-	(<extendedcrafting:material> * 3, 
-	<thermalfoundation:storage_alloy:2>, <immersiveengineering:material:19>, 15000);
-	
-	mods.thermalexpansion.InductionSmelter.addRecipe
-	(<extendedcrafting:material> * 4, 
-	<thermalfoundation:storage_alloy:2>, <nuclearcraft:alloy:1>, 20000);
-	
-	mods.thermalexpansion.InductionSmelter.addRecipe
-	(<extendedcrafting:material> * 3, 
-	<thermalfoundation:storage_alloy:2>, <nuclearcraft:alloy:3>, 15000);
-	
+	(<extendedcrafting:material> * 2,
+	<thermalfoundation:storage_alloy:2>, <contenttweaker:circuit_substrate>, 50000);
+
 # Crafting Core
 	recipes.remove(<extendedcrafting:crafting_core>);
 	mods.forestry.Carpenter.addRecipe(<extendedcrafting:crafting_core>, 
