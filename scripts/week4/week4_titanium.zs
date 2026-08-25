@@ -30,14 +30,15 @@ recipes.remove(<advancedrocketry:productingot:0>);
 # MM (rutile synth) -> crush -> chlorinate -> MM (Kroll) -> smelt
 
 # Rutile ore must be crushed: any crusher in the pack grinds it to
-# four titanium dusts (the Rutile material only has an ORE product -
-# there is no separate rutile dust). Four dusts, not two: the Kroll
-# chain is the 8x route, that is its advantage over the side doors.
-scripts.process.crush(<libvulpes:ore0:8>, <libvulpes:productdust:7> * 4);
+# the natural two titanium dusts (the Rutile material only has an ORE
+# product - there is no separate rutile dust)
+scripts.process.crush(<libvulpes:ore0:8>, <libvulpes:productdust:7> * 2);
 
 # Chlorination: two titanium dusts meet liquid chlorine in the NC
-# Dissolver and come out as titanium tetrachloride
-mods.nuclearcraft.dissolver.addRecipe(<libvulpes:productdust:7> * 2, <liquid:liquidchlorine> * 500, <liquid:titanium_tetrachloride> * 500);
+# Dissolver and come out as a full bucket of titanium tetrachloride.
+# The 8x yield lives in the chemistry, not in the crusher: two batches
+# of Kroll reduction run off each bucket.
+mods.nuclearcraft.dissolver.addRecipe(<libvulpes:productdust:7> * 2, <liquid:liquidchlorine> * 500, <liquid:titanium_tetrachloride> * 1000);
 
 # Kroll reduction: the tetrachloride meets magnesium on the Advanced
 # Metallurgic Fabricator (see modular_machinery/
