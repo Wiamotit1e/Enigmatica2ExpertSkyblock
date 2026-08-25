@@ -8,13 +8,33 @@ mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_modularium_alloy"
 	.addItemInput(<actuallyadditions:item_crystal_empowered:1>)
 	.build();
 
-mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_titanium_ingot", machineName, 10)
+# Titanium ingot - week4: deleted. The titanium line now runs through
+# the Kroll process (week4_titanium.zs); this machine only performs the
+# reduction step: titanium tetrachloride + magnesium -> titanium sponge
+#mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_titanium_ingot", machineName, 10)
+#	.addEnergyPerTickInput(100000)
+#	.addItemOutput(<ore:ingotTitanium>, 2)
+#	.addItemInput(<ore:oreMagnesium>, 2)
+#	.addItemInput(<ore:itemSalt>, 4)
+#	.addItemInput(<ic2:crafting:15>)
+#	.addFluidInput(<liquid:liquidchlorine> * 500)
+#	.build();
+
+mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_rutile_ore", machineName, 20)
 	.addEnergyPerTickInput(100000)
-	.addItemOutput(<ore:ingotTitanium>, 2)
+	.addItemOutput(<libvulpes:ore0:8>)
+	.addItemOutput(<libvulpes:ore0:8>)
 	.addItemInput(<ore:oreMagnesium>, 2)
 	.addItemInput(<ore:itemSalt>, 4)
 	.addItemInput(<ic2:crafting:15>)
 	.addFluidInput(<liquid:liquidchlorine> * 500)
+	.build();
+
+mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_titanium_sponge", machineName, 20)
+	.addEnergyPerTickInput(100000)
+	.addItemOutput(<contenttweaker:titanium_sponge>)
+	.addItemInput(<ore:ingotMagnesium>)
+	.addFluidInput(<liquid:titanium_tetrachloride> * 500)
 	.build();
 
 mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_manasteel_ingot", machineName, 10)

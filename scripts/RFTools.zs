@@ -61,13 +61,13 @@
 	[<mekanism:teleportationcore>, <ic2:te:39>, <mekanism:teleportationcore>], 
 	[<ore:enderpearl>, <ore:enderpearl>, <ore:enderpearl>]]);
 
-# Machine Frame
-	recipes.remove(<rftools:machine_frame>);
-	recipes.addShaped("RFTools Machine Frame", 
-	<rftools:machine_frame> * 2, 
-	[[<ic2:heat_vent>, <ore:gearGold>, <ic2:heat_vent>],
-	[<industrialforegoing:dryrubber>, <teslacorelib:machine_case>, <industrialforegoing:dryrubber>], 
-	[<industrialforegoing:pink_slime>, <industrialforegoing:range_addon:*>, <industrialforegoing:pink_slime>]]);
+# Machine Frame - week4: replaced by week4/week4_recipes.zs (W4 RFTools Machine Frame)
+#	recipes.remove(<rftools:machine_frame>);
+#	recipes.addShaped("RFTools Machine Frame",
+#	<rftools:machine_frame> * 2,
+#	[[<ic2:heat_vent>, <ore:gearGold>, <ic2:heat_vent>],
+#	[<industrialforegoing:dryrubber>, <teslacorelib:machine_case>, <industrialforegoing:dryrubber>],
+#	[<industrialforegoing:pink_slime>, <industrialforegoing:range_addon:*>, <industrialforegoing:pink_slime>]]);
 
 # Machine Base
 	recipes.remove(<rftools:machine_base>);

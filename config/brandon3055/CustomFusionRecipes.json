@@ -140,14 +140,6 @@
   },
   {
     "mode": "ADD",
-    "result": "mekanism:controlcircuit,1,3",
-    "catalyst": "mekanism:controlcircuit,1,2",
-    "energy": 500000,
-    "tier": 0,
-    "ingredients": ["mekanism:atomicalloy", "mekanism:atomicalloy", "mekanism:atomicalloy", "mekanism:atomicalloy"]
-  },
-  {
-    "mode": "ADD",
     "result": "thermalexpansion:frame,1,129",
     "catalyst": "thermalexpansion:frame,1,128",
     "energy": 2500000,
@@ -155,8 +147,21 @@
     "ingredients": [
       "immersiveengineering:material,1,2",
       "thermalfoundation:material,1,354",
-      "thermalfoundation:material,1,290",
+      "contenttweaker:circuit_substrate",
       "mekanism:basicblock,1,8"
+    ]
+  },
+  {
+    "mode": "ADD",
+    "result": "threng:material,1,6",
+    "catalyst": "contenttweaker:circuit_substrate",
+    "energy": 500000,
+    "tier": 0,
+    "ingredients": [
+      "threng:material,1,5",
+      "threng:material,1,5",
+      "threng:material,1,5",
+      "threng:material,1,5"
     ]
   },
   {

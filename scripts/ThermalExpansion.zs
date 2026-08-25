@@ -54,31 +54,31 @@ for slab in <ore:slabWood>.items {
 	[<ore:ingotInvar>, <thermalexpansion:frame:64>, <ore:ingotInvar>], 
 	[<ore:gearCopper>, <immersiveengineering:metal_decoration0>, <ore:gearCopper>]]);
 
-# Reinforced Cell Frame (Empty)
-	recipes.addShapedMirrored("Reinforced Cell Frame", 
-	<thermalexpansion:frame:130>, 
-	[[<ore:gearSilver>, <thermalfoundation:material:515>, <ore:gearSilver>],
-	[<ore:plateElectrumFlux>, <thermalexpansion:frame:129>, <ore:plateElectrumFlux>], 
-	[<ore:gemCrystalFlux>, <tconstruct:large_plate>.withTag({Material: "electrum"}), <ore:gemCrystalFlux>]]);
+# Reinforced Cell Frame (Empty) - week4: replaced by week4/week4_recipes.zs (W4 Reinforced Cell Frame)
+#	recipes.addShapedMirrored("Reinforced Cell Frame",
+#	<thermalexpansion:frame:130>,
+#	[[<ore:gearSilver>, <thermalfoundation:material:515>, <ore:gearSilver>],
+#	[<ore:plateElectrumFlux>, <thermalexpansion:frame:129>, <ore:plateElectrumFlux>],
+#	[<ore:gemCrystalFlux>, <tconstruct:large_plate>.withTag({Material: "electrum"}), <ore:gemCrystalFlux>]]);
 
 # Reinforced Cell Frame (Full)
 	mods.thermalexpansion.Transposer.addFillRecipe(<thermalexpansion:frame:146>, <thermalexpansion:frame:130>, <liquid:lumium> * 576, 250000);
 
-# Signalum Cell Frame (Empty)
-	recipes.addShapedMirrored("Signalum Cell Frame Empty", 
-	<thermalexpansion:frame:131>, 
-	[[<ore:plateSignalum>, <ore:crystalCinnabar>, <ore:plateSignalum>],
-	[<thermalfoundation:material:832>, <thermalexpansion:frame:146>, <thermalfoundation:material:832>], 
-	[<ore:plateSignalum>, <ore:crystalSlagRich>, <ore:plateSignalum>]]);
+# Signalum Cell Frame (Empty) - week4: replaced by week4/week4_recipes.zs (W4 Signalum Cell Frame)
+#	recipes.addShapedMirrored("Signalum Cell Frame Empty",
+#	<thermalexpansion:frame:131>,
+#	[[<ore:plateSignalum>, <ore:crystalCinnabar>, <ore:plateSignalum>],
+#	[<thermalfoundation:material:832>, <thermalexpansion:frame:146>, <thermalfoundation:material:832>],
+#	[<ore:plateSignalum>, <ore:crystalSlagRich>, <ore:plateSignalum>]]);
 
 # Signalum Cell Frame (Full)
 	mods.thermalexpansion.InductionSmelter.addRecipe(<thermalexpansion:frame:147>, <thermalexpansion:frame:131>, <minecraft:redstone_block> * 40, 100000);
 
-# Resonant Cell Frame (Empty)
-	mods.forestry.ThermionicFabricator.addCast(<thermalexpansion:frame:132>, 
+# Resonant Cell Frame (Empty) - week4: circuit substrate anchors the bottom row
+	mods.forestry.ThermionicFabricator.addCast(<thermalexpansion:frame:132>,
 	[[<thermalfoundation:material:166>, <actuallyadditions:block_misc:8>, <thermalfoundation:material:166>],
 	[<thermalfoundation:glass_alloy:7>, <thermalexpansion:frame:147>, <thermalfoundation:glass_alloy:7>],
-	[<thermalfoundation:material:1028>, <thermalfoundation:material:1028>, <thermalfoundation:material:1028>]], <liquid:glass> * 4000);
+	[<thermalfoundation:material:1028>, <contenttweaker:circuit_substrate>, <thermalfoundation:material:1028>]], <liquid:glass> * 4000);
 
 # Resonant Cell Frame (Full)
 	mods.extendedcrafting.CombinationCrafting.addRecipe(<thermalexpansion:frame:148>, 
@@ -88,7 +88,8 @@ for slab in <ore:slabWood>.items {
 	<ic2:lapotron_crystal:*>, <forestry:thermionic_tubes:12>, <forestry:crafting_material:1>,
 	<mekanismgenerators:reactor:1>, <environmentaltech:structure_frame_1>, <rftools:infused_diamond>,
 	<mekanism:controlcircuit:3>, <thermalfoundation:material:295>, <environmentaltech:litherite_crystal>,
-	<nuclearcraft:part:6>, <nuclearcraft:gem:1>]);
+# week4: 64x speculation core joins the frame recipe
+	<nuclearcraft:part:6>, <nuclearcraft:gem:1>, <threng:material:13>]);
 	
 # Mana Dust
 	recipes.addShapedMirrored("Mana Dust", 
@@ -146,12 +147,12 @@ for slab in <ore:slabWood>.items {
 	recipes.remove(<thermalexpansion:frame:128>);
 	mods.mekanism.infuser.addRecipe("REDSTONE", 400, <thermalexpansion:frame>, <thermalexpansion:frame:128>);
 
-# Machine Frame
+# Machine Frame (week4: circuit substrate replaces the AA iron casing and one crystal)
 	recipes.remove(<thermalexpansion:frame>);
-	mods.forestry.ThermionicFabricator.addCast(<thermalexpansion:frame> * 2, 
+	mods.forestry.ThermionicFabricator.addCast(<thermalexpansion:frame> * 2,
 	[[<actuallyadditions:item_crystal:5>, <rftools:machine_frame>, <actuallyadditions:item_crystal:5>],
-	[<immersiveengineering:metal_decoration0:5>, <thermalexpansion:frame:64>, <actuallyadditions:block_misc:9>], 
-	[<actuallyadditions:item_crystal:5>, <teslacorelib:machine_case>, <actuallyadditions:item_crystal:5>]], 
+	[<immersiveengineering:metal_decoration0:5>, <thermalexpansion:frame:64>, <contenttweaker:circuit_substrate>],
+	[<actuallyadditions:item_crystal:5>, <teslacorelib:machine_case>, <contenttweaker:circuit_substrate>]],
 	<liquid:glass> * 6000);
 	
 # Removing craftable Bronze 
@@ -193,8 +194,8 @@ for slab in <ore:slabWood>.items {
 	mods.thermalexpansion.Transposer.addFillRecipe(<thermalfoundation:material:167>, <nuclearcraft:alloy:9>, <liquid:ender> * 250, 10000);
 	mods.thermalexpansion.InductionSmelter.addRecipe(<nuclearcraft:alloy:9> * 4, <thermalfoundation:material:134>, <contenttweaker:thermal_prism>, 25000);
 
-# Hardened Cell Frame
-	mods.actuallyadditions.Empowerer.addRecipe(<thermalexpansion:frame:129>, <thermalexpansion:frame:128>, <immersiveengineering:material:2>, <thermalfoundation:material:354>, <thermalfoundation:material:290>, <mekanism:basicblock:8>, 2500000, 200, [0.25, 0.25, 0.29]);
+# Hardened Cell Frame - week4: circuit substrate replaces one stand
+	mods.actuallyadditions.Empowerer.addRecipe(<thermalexpansion:frame:129>, <thermalexpansion:frame:128>, <immersiveengineering:material:2>, <thermalfoundation:material:354>, <contenttweaker:circuit_substrate>, <mekanism:basicblock:8>, 2500000, 200, [0.25, 0.25, 0.29]);
 
 # Remove creative kit crafts (no actual creative conversion kit)
 recipes.removeByRecipeName("thermalexpansion:cell_17");

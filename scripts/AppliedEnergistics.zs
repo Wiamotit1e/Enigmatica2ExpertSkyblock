@@ -126,13 +126,13 @@ mods.actuallyadditions.Crusher.removeRecipe(<appliedenergistics2:material>);
 	[<extracells:storage.component:2>, <appliedenergistics2:material:22>, <extracells:storage.component:2>], 
 	[<ore:dustEnder>, <extracells:storage.component:2>, <ore:dustEnder>]]);
 	
-# Quantum Link Chamber
-	recipes.remove(<appliedenergistics2:quantum_link>);
-	recipes.addShapedMirrored("Quantum Link Chamber", 
-	<appliedenergistics2:quantum_link>, 
-	[[<appliedenergistics2:quartz_vibrant_glass>, <rftools:infused_enderpearl>, <appliedenergistics2:quartz_vibrant_glass>],
-	[pearlFluix, <mekanism:machineblock3>, pearlFluix], 
-	[<appliedenergistics2:quartz_vibrant_glass>, <ore:manaPearl>, <appliedenergistics2:quartz_vibrant_glass>]]);
+# Quantum Link Chamber - week4: replaced by week4/week4_recipes.zs (W4 Quantum Link Chamber)
+#	recipes.remove(<appliedenergistics2:quantum_link>);
+#	recipes.addShapedMirrored("Quantum Link Chamber",
+#	<appliedenergistics2:quantum_link>,
+#	[[<appliedenergistics2:quartz_vibrant_glass>, <rftools:infused_enderpearl>, <appliedenergistics2:quartz_vibrant_glass>],
+#	[pearlFluix, <mekanism:machineblock3>, pearlFluix],
+#	[<appliedenergistics2:quartz_vibrant_glass>, <ore:manaPearl>, <appliedenergistics2:quartz_vibrant_glass>]]);
 
 # Drive
 	recipes.remove(<appliedenergistics2:drive>);
@@ -223,12 +223,13 @@ mods.actuallyadditions.Crusher.removeRecipe(<appliedenergistics2:material>);
 		[<appliedenergistics2:energy_cell>, <appliedenergistics2:part:76>, <appliedenergistics2:energy_cell>], 
 		[<appliedenergistics2:material:22>, <appliedenergistics2:energy_cell>, <appliedenergistics2:material:23>]]);
 
-		recipes.remove(controller);
-		recipes.addShaped("ME Controller", 
-		controller, 
-		[[<appliedenergistics2:smooth_sky_stone_block>, <advancedrocketry:ic:3>, <appliedenergistics2:smooth_sky_stone_block>],
-		[<appliedenergistics2:fluix_block>, <appliedenergistics2:energy_acceptor>, <appliedenergistics2:fluix_block>], 
-		[<teslacorelib:machine_case>, pearlFluix, <teslacorelib:machine_case>]]);
+		# week4: replaced by week4/week4_recipes.zs (W4 ME Controller)
+#		recipes.remove(controller);
+#		recipes.addShaped("ME Controller",
+#		controller,
+#		[[<appliedenergistics2:smooth_sky_stone_block>, <advancedrocketry:ic:3>, <appliedenergistics2:smooth_sky_stone_block>],
+#		[<appliedenergistics2:fluix_block>, <appliedenergistics2:energy_acceptor>, <appliedenergistics2:fluix_block>],
+#		[<teslacorelib:machine_case>, pearlFluix, <teslacorelib:machine_case>]]);
 	}
 	
 # Sky stone Dust

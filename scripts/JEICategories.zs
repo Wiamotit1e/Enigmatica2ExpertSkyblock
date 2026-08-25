@@ -16,7 +16,11 @@ var categoriesToHide as string[] = [
 	"EIOTank",
 	"xu2_machine_extrautils2:furnace",
 	"xu2_machine_extrautils2:generator_survival",
-	"xu2_machine_extrautils2:generator"
+	"xu2_machine_extrautils2:generator",
+	"threng.agg",
+	"threng.energize",
+	"threng.etch",
+	"threng.purify"
 
 ];
 

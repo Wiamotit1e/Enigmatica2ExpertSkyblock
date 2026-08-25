@@ -1,5 +1,11 @@
 #priority -2
 
+import mods.industrialforegoing.ProteinReactor;
+import mods.industrialforegoing.FluidDictionary;
+import mods.forestry.Carpenter;
+import mods.thaumcraft.Infusion;
+import crafttweaker.item.IIngredient;
+
 # ######################################################################
 #
 # week4_recipes.zs
@@ -14,14 +20,16 @@
 # No rh() calls here: no item is fully removed, only re-reciped.
 #
 # NOTE: machine recipes the pack adds through ModTweaker (TE Induction
-# Smelter) or EnderTweaker (EnderIO) cannot be overlaid from here:
-# both integrations apply removals BEFORE additions at FMLLoadComplete,
-# so removeRecipe() never sees pack-added recipes (it logs "No ...
-# recipe exists" and the old recipe survives). Those changes live
-# directly in the pack files (ThermalExpansion.zs, ExtendedCrafting.zs,
-# NuclearCraft.zs). Optional-mod compat moved to week4_rs_compat.zs
-# behind #modloaded: brackets resolve at parse time, so a runtime
-# isNull(itemUtils.getItem(...)) guard cannot protect them.
+# Smelter, Thermionic Fabricator) or EnderTweaker (EnderIO) cannot be
+# overlaid from here: both integrations apply removals BEFORE additions
+# at FMLLoadComplete, so removeRecipe() never sees pack-added recipes
+# (it logs "No ... recipe exists" and the old recipe survives). Those
+# changes live directly in the pack files (ThermalExpansion.zs,
+# ExtendedCrafting.zs, NuclearCraft.zs). Every crafting recipe replaced
+# here has had its old definition commented out of the pack file, so
+# each recipe exists exactly once. Optional-mod compat moved to
+# week4_rs_compat.zs behind #modloaded: brackets resolve at parse time,
+# so a runtime isNull(itemUtils.getItem(...)) guard cannot protect them.
 #
 # ######################################################################
 
@@ -50,12 +58,13 @@ recipes.addShaped("W4 Thermal Prism",
 [<minecraft:glowstone_dust>, <ore:dustRedstone>, <minecraft:glowstone_dust>],
 [<ore:gemQuartz>, <minecraft:glowstone_dust>, <ore:gemQuartz>]]);
 
-# Fusion Catalyst - late game (blaze powder + diamonds + ghast tear)
+# Fusion Catalyst - late game: a contained star. Draconic shell, starmetal
+# conduit, litherite lattice, void-seed anchors, gaia spark, nether-star core
 recipes.addShaped("W4 Fusion Catalyst",
 <contenttweaker:fusion_catalyst>,
-[[<minecraft:blaze_powder>, <ore:gemQuartz>, <minecraft:blaze_powder>],
-[<ore:gemDiamond>, <minecraft:ghast_tear>, <ore:gemDiamond>],
-[<minecraft:blaze_powder>, <ore:gemQuartz>, <minecraft:blaze_powder>]]);
+[[<draconicevolution:infused_obsidian>, <astralsorcery:itemcraftingcomponent:4>, <draconicevolution:infused_obsidian>],
+[<environmentaltech:litherite>, <minecraft:nether_star>, <environmentaltech:litherite>],
+[<thaumcraft:void_seed>, <botania:manaresource:5>, <thaumcraft:void_seed>]]);
 
 # ########################
 # Early game remakes
@@ -121,14 +130,20 @@ recipes.addShapedMirrored("W4 Sticks from logs",
 # Mid game - frames, circuits, controllers
 # ########################
 
-# TE Machine Frame (Thermionic Fabricator cast; substrate replaces
-# the AA iron casing and one crystal)
-mods.forestry.ThermionicFabricator.removeCast(<thermalexpansion:frame>);
-mods.forestry.ThermionicFabricator.addCast(<thermalexpansion:frame> * 2,
-[[<actuallyadditions:item_crystal:5>, <rftools:machine_frame>, <actuallyadditions:item_crystal:5>],
-[<immersiveengineering:metal_decoration0:5>, <thermalexpansion:frame:64>, <contenttweaker:circuit_substrate>],
-[<actuallyadditions:item_crystal:5>, <teslacorelib:machine_case>, <contenttweaker:circuit_substrate>]],
-<liquid:glass> * 6000);
+# Time in a Bottle (mana diamonds + plates; slightly harder than the
+# RandomThings default of gold + diamonds + lapis + clock + bottle)
+recipes.removeShaped(<randomthings:timeinabottle>,
+[[<ore:ingotGold>, <ore:ingotGold>, <ore:ingotGold>],
+[<minecraft:diamond>, <minecraft:clock>, <minecraft:diamond>],
+[<minecraft:dye:4>, <minecraft:glass_bottle>, <minecraft:dye:4>]]);
+recipes.addShaped("W4 Time in a Bottle",
+<randomthings:timeinabottle>,
+[[<ore:plateLapis>, <ore:plateGold>, <ore:plateLapis>],
+[<ore:gemDiamond>, <minecraft:clock>, <ore:gemDiamond>],
+[<botania:manaresource:1>, <minecraft:glass_bottle>, <botania:manaresource:1>]]);
+
+# TE Machine Frame - changed directly in ThermalExpansion.zs (Thermionic
+# Fabricator casts cannot be overlaid: ModTweaker removals run before additions)
 
 # Mekanism Steel Casing (substrate replaces the osmium block columns)
 recipes.remove(<mekanism:basicblock:8>);
@@ -182,27 +197,79 @@ recipes.addShapedMirrored("W4 Advanced Circuit",
 [<contenttweaker:circuit_substrate>, <ore:circuitBasic>, <contenttweaker:circuit_substrate>],
 [<ore:alloyBasic>, <contenttweaker:circuit_substrate>, <ore:alloyBasic>]]);
 
-# AE2 ME Controller (substrate replaces advanced rocketry isolation wafer)
+# IF Fluiddictionary Converter (machine case + substrate replace iron ore)
+recipes.remove(<industrialforegoing:fluiddictionary_converter>);
+recipes.addShaped("W4 Fluiddictionary Converter",
+<industrialforegoing:fluiddictionary_converter>,
+[[<ore:itemRubber>, <teslacorelib:machine_case>, <ore:itemRubber>],
+[<ore:blockGlass>, <contenttweaker:circuit_substrate>, <ore:blockGlass>],
+[<minecraft:bucket>, <ore:gearIron>, <minecraft:bucket>]]);
+
+# AE2 ME Controller (wafer restored, bottom-center upgraded to an elite
+# circuit - a notch harder than the pack's own recipe)
 if (!isNull(itemUtils.getItem("appliedenergistics2:controller"))) {
 	recipes.remove(<appliedenergistics2:controller>);
 	recipes.addShaped("W4 ME Controller",
 	<appliedenergistics2:controller>,
-	[[<appliedenergistics2:smooth_sky_stone_block>, <contenttweaker:circuit_substrate>, <appliedenergistics2:smooth_sky_stone_block>],
+	[[<appliedenergistics2:smooth_sky_stone_block>, <advancedrocketry:ic:3>, <appliedenergistics2:smooth_sky_stone_block>],
 	[<appliedenergistics2:fluix_block>, <appliedenergistics2:energy_acceptor>, <appliedenergistics2:fluix_block>],
-	[<teslacorelib:machine_case>, <ore:pearlFluix>, <teslacorelib:machine_case>]]);
+	[<teslacorelib:machine_case>, <ore:circuitElite>, <teslacorelib:machine_case>]]);
 }
+
+# Time in a Bottle (30 min charge) - AE stage: processors infuse the
+# bottle with 30 minutes of stored time (timeData.storedTime in ticks)
+recipes.addShaped("W4 Time in a Bottle 30m",
+<randomthings:timeinabottle>.withTag({timeData: {storedTime: 36000}}),
+[[<appliedenergistics2:material:26>, <appliedenergistics2:material:2>, <appliedenergistics2:material:27>],
+[<appliedenergistics2:material:10>, <randomthings:timeinabottle>, <appliedenergistics2:material:10>],
+[<appliedenergistics2:material:25>, <appliedenergistics2:material:2>, <appliedenergistics2:material:25>]]);
+
+# Time in a Bottle (60 min) - dense energy cells overcharge a bottle
+# holding at least 30 minutes. The bottle is matched by threshold, not
+# exact NBT: storedTime keeps accruing while the item sits in the
+# inventory, so an exact-tag match would never recognize a real bottle.
+recipes.addShaped("W4 Time in a Bottle 60m",
+<randomthings:timeinabottle>.withTag({timeData: {storedTime: 72000}}),
+[[<appliedenergistics2:material:2>, <appliedenergistics2:dense_energy_cell>, <appliedenergistics2:material:2>],
+[<ore:pearlFluix>, <randomthings:timeinabottle>.marked("b"), <ore:pearlFluix>],
+[<appliedenergistics2:material:2>, <appliedenergistics2:dense_energy_cell>, <appliedenergistics2:material:2>]],
+function(out, ins, cInfo) {
+	if (D(ins.b.tag).getInt("timeData.storedTime", 0) >= 36000) {
+		return out;
+	}
+	return null;
+}, null);
+
+# Time in a Bottle (24 h) - the fusion catalyst collapses a day into glass,
+# from a bottle holding at least an hour
+recipes.addShaped("W4 Time in a Bottle 24h",
+<randomthings:timeinabottle>.withTag({timeData: {storedTime: 1728000}}),
+[[<contenttweaker:thermal_prism>, <contenttweaker:fusion_catalyst>, <contenttweaker:thermal_prism>],
+[null, <randomthings:timeinabottle>.marked("b"), null],
+[null, null, null]],
+function(out, ins, cInfo) {
+	if (D(ins.b.tag).getInt("timeData.storedTime", 0) >= 72000) {
+		return out;
+	}
+	return null;
+}, null);
 
 # ########################
 # Late game
 # ########################
 
-# Draconic Core (fusion catalyst replaces the gendustry genetics processor)
+# Draconic Core - moved to a 5x5: the melodic alloy returns, and the
+# resonant upgrade kit joins the circle alongside the fusion catalyst
+# and two entropy cores. Order anchored in disorder, tech and magic
+# holding hands.
 recipes.remove(<draconicevolution:draconic_core>);
-recipes.addShapedMirrored("W4 Draconic Core",
+mods.extendedcrafting.TableCrafting.addShaped(0,
 <draconicevolution:draconic_core>,
-[[<ore:blockDraconium>, <ore:ingotMelodicAlloy>, <ore:blockDraconium>],
-[<ore:crystalLitherite>, <contenttweaker:fusion_catalyst>, <ore:crystalLitherite>],
-[<ore:plateElite>, <draconicevolution:dislocator>, <ore:plateElite>]]);
+[[<ore:blockDraconium>, null, <ore:ingotMelodicAlloy>, null, <ore:blockDraconium>],
+[null, <ore:crystalLitherite>, <thermalfoundation:upgrade:3>, <ore:crystalLitherite>, null],
+[<ore:plateElite>, <contenttweaker:entropy_core>, <contenttweaker:fusion_catalyst>, <contenttweaker:entropy_core>, <ore:plateElite>],
+[null, <ore:crystalLitherite>, <draconicevolution:dislocator>, <ore:crystalLitherite>, null],
+[null, null, <ore:blockDraconium>, null, null]]);
 
 # EnderIO Octadic Capacitor (fusion catalyst replaces ferroboron)
 recipes.remove(<enderio:item_basic_capacitor:2>);
@@ -211,3 +278,120 @@ recipes.addShapedMirrored("W4 Octadic Capacitor",
 [[<contenttweaker:fusion_catalyst>, <ore:ingotVibrantAlloy>, <contenttweaker:fusion_catalyst>],
 [<enderio:item_basic_capacitor:1>, <draconicevolution:draconium_block:1>, <enderio:item_basic_capacitor:1>],
 [<contenttweaker:fusion_catalyst>, <ore:ingotVibrantAlloy>, <contenttweaker:fusion_catalyst>]]);
+
+# ########################
+# Blood Magic - industrial life essence
+# ########################
+
+# Life essence without the knives: mob farm leftovers and animal waste,
+# refined through a three-stage biotech chain.
+#
+# Stage 1 - crude essence: the pack already feeds every listAllmeatraw
+# item to the Protein Reactor. protein and sewage become the custom
+# fluid crude_life_essence in a Fluid Dictionary Converter.
+FluidDictionary.add("protein", "crude_life_essence", 0.1);
+FluidDictionary.add("sewage", "crude_life_essence", 0.025);
+
+# Enriched Bonemeal - the Sky Resources default recipe is gone; this is
+# the only one (bonemeal, sugar and rotten flesh fermented together)
+recipes.remove(<skyresources:baseitemcomponent:4>);
+recipes.addShaped("W4 Enriched Bonemeal",
+<skyresources:baseitemcomponent:4> * 2,
+[[<minecraft:dye:15>, <minecraft:sugar>, <minecraft:dye:15>],
+[<minecraft:sugar>, <minecraft:rotten_flesh>, <minecraft:sugar>],
+[<minecraft:dye:15>, <minecraft:sugar>, <minecraft:dye:15>]]);
+
+# Stage 2 - refinement: the NC Dissolver dissolves Enriched Bonemeal
+# into the crude essence and refines it (item + fluid -> fluid).
+# The bonemeal is the catalyst the line was always missing.
+mods.nuclearcraft.dissolver.addRecipe(<skyresources:baseitemcomponent:4>, <liquid:crude_life_essence> * 1000, <liquid:refined_life_essence> * 1000);
+
+# Stage 3 - the Fluid Dictionary Converter turns one bucket of refined
+# essence into one bucket of life essence. Deliberately string-based:
+# the BM fluid is resolved at runtime inside the converter tile, which
+# cannot hit the parse-time "Ghost liquid" trap that killed the Vat.
+FluidDictionary.add("refined_life_essence", "lifeessence", 1.0);
+
+# ########################
+# Magic x Tech crossover
+# ########################
+
+# Mekanism Elite Circuit - starmetal enters the circuit line
+recipes.remove(<mekanism:controlcircuit:2>);
+recipes.addShaped("W4 Elite Circuit",
+<mekanism:controlcircuit:2>,
+[[<ore:alloyElite>, <astralsorcery:itemcraftingcomponent:4>, <ore:alloyElite>],
+[<ore:alloyElite>, <ore:circuitAdvanced>, <ore:alloyElite>],
+[<ore:alloyElite>, <astralsorcery:itemcraftingcomponent:4>, <ore:alloyElite>]]);
+
+# Mekanism Ultimate Circuit - the Carpenter bathes the elite circuit in
+# crude life essence: the life essence line feeds the top circuit tier
+recipes.remove(<mekanism:controlcircuit:3>);
+Carpenter.addRecipe(<mekanism:controlcircuit:3>,
+[[<ore:alloyUltimate>, <astralsorcery:itemcraftingcomponent:4>, <ore:alloyUltimate>],
+[<astralsorcery:itemcraftingcomponent:4>, <mekanism:controlcircuit:2>, <astralsorcery:itemcraftingcomponent:4>],
+[<ore:alloyUltimate>, <astralsorcery:itemcraftingcomponent:4>, <ore:alloyUltimate>]],
+40, <liquid:crude_life_essence> * 500);
+
+# Mekanism Teleportation Core - thaumic infusion replaces the default
+# recipe: teleportation tech now requires the arcane
+recipes.remove(<mekanism:teleportationcore>);
+Infusion.registerRecipe("w4_teleportation_core", "INFUSION",
+<mekanism:teleportationcore>, 12,
+[<aspect:permutatio> * 30, <aspect:auram> * 20, <aspect:praecantatio> * 20],
+<minecraft:ender_pearl>,
+[<ore:quicksilver>, <ore:quicksilver>, <ore:quicksilver>, <ore:quicksilver>,
+<ore:crystalFluix>, <ore:crystalFluix>, <ore:crystalFluix>, <ore:crystalFluix>] as IIngredient[]);
+
+# Mekanism Fusion Reactor - a demon will crystal steadies the core
+recipes.remove(<mekanismgenerators:reactor>);
+recipes.addShaped("W4 Fusion Reactor",
+<mekanismgenerators:reactor>,
+[[<ore:circuitUltimate>, <bloodmagic:item_demon_crystal:2>, <ore:circuitUltimate>],
+[<mekanismgenerators:reactor:1>, <nuclearcraft:fusion_core>, <mekanismgenerators:reactor:1>],
+[<mekanismgenerators:reactor:1>, <mekanismgenerators:reactor:1>, <mekanismgenerators:reactor:1>]]);
+
+# NC Fusion Core - moved to week4/week4_corium.zs: the core must be
+# quenched in a corium bath at the Carpenter, so every fusion line in
+# the pack passes through one deliberate meltdown.
+
+# ########################
+# Tech line reshuffle
+# ########################
+
+# IC2 Lapotron Crystal - one MOX fuel rod per crystal: the quantum tier
+# now passes through the fission reactor's reprocessing line
+recipes.remove(<ic2:lapotron_crystal>);
+recipes.addShaped("W4 Lapotron Crystal",
+<ic2:lapotron_crystal>,
+[[<ore:circuitAdvanced>, <ore:gemLapis>, <ore:circuitAdvanced>],
+[<ore:gemLapis>, <ic2:nuclear:4>, <ore:gemLapis>],
+[<ore:circuitAdvanced>, <ore:gemLapis>, <ore:circuitAdvanced>]]);
+
+# TE Reinforced Cell Frame - the thermal prism replaces the electrum core
+recipes.remove(<thermalexpansion:frame:130>);
+recipes.addShapedMirrored("W4 Reinforced Cell Frame",
+<thermalexpansion:frame:130>,
+[[<ore:gearSilver>, <thermalfoundation:material:515>, <ore:gearSilver>],
+[<ore:plateElectrumFlux>, <contenttweaker:thermal_prism>, <ore:plateElectrumFlux>],
+[<ore:gemCrystalFlux>, <thermalexpansion:frame:129>, <ore:gemCrystalFlux>]]);
+
+# TE Signalum Cell Frame - substrates cradle the cell
+recipes.remove(<thermalexpansion:frame:131>);
+recipes.addShapedMirrored("W4 Signalum Cell Frame",
+<thermalexpansion:frame:131>,
+[[<ore:plateSignalum>, <ore:crystalCinnabar>, <ore:plateSignalum>],
+[<contenttweaker:circuit_substrate>, <thermalexpansion:frame:146>, <contenttweaker:circuit_substrate>],
+[<ore:plateSignalum>, <ore:crystalSlagRich>, <ore:plateSignalum>]]);
+
+# AE2 Quantum Link Chamber - a gaia spirit anchors the quantum link
+recipes.remove(<appliedenergistics2:quantum_link>);
+recipes.addShapedMirrored("W4 Quantum Link Chamber",
+<appliedenergistics2:quantum_link>,
+[[<appliedenergistics2:quartz_vibrant_glass>, <rftools:infused_enderpearl>, <appliedenergistics2:quartz_vibrant_glass>],
+[<ore:pearlFluix>, <botania:manaresource:5>, <ore:pearlFluix>],
+[<appliedenergistics2:quartz_vibrant_glass>, <ore:manaPearl>, <appliedenergistics2:quartz_vibrant_glass>]]);
+
+# The titanium rework moved to week4/week4_titanium.zs: the full Kroll
+# line (crush -> chlorination -> reduction -> smelt) lives there, plus
+# the nugget-to-rutile-ore crafting swap.

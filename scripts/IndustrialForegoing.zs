@@ -164,12 +164,13 @@ function fluidDict(ins as string[]) {
 	[<ore:itemRubber>, <ore:oreIron>, <ore:itemRubber>], 
 	[<ore:nuggetIron>, <ore:ingotIron>, <ore:blockIron>]]);
 	
-	recipes.remove(<industrialforegoing:fluiddictionary_converter>);
-	recipes.addShaped("Industrialforegoing Fluiddictionary Converter",
-	<industrialforegoing:fluiddictionary_converter>,
-	[[<ore:itemRubber>, <ore:itemRubber>, <ore:itemRubber>], 
-	[<ore:blockGlass>, <ore:oreIron>, <ore:blockGlass>], 
-	[<minecraft:bucket>, <ore:gearIron>, <minecraft:bucket>]]);
+	# week4: replaced by week4/week4_recipes.zs (W4 Fluiddictionary Converter)
+#	recipes.remove(<industrialforegoing:fluiddictionary_converter>);
+#	recipes.addShaped("Industrialforegoing Fluiddictionary Converter",
+#	<industrialforegoing:fluiddictionary_converter>,
+#	[[<ore:itemRubber>, <ore:itemRubber>, <ore:itemRubber>],
+#	[<ore:blockGlass>, <ore:oreIron>, <ore:blockGlass>],
+#	[<minecraft:bucket>, <ore:gearIron>, <minecraft:bucket>]]);
 
 
 # Oredict Belts Recipes

@@ -3,3 +3,17 @@ itemGroup.other=ContentTweaker
 item.contenttweaker.bee_diversity.name=Bee Diversity Store
 item.contenttweaker.anglesite.name=Anglesite
 item.contenttweaker.benitoite.name=Benitoite
+
+item.contenttweaker.coarse_mechanism.name=Crude Mechanism
+item.contenttweaker.circuit_substrate.name=Machine Circuit Substrate
+item.contenttweaker.thermal_prism.name=Thermal Prism
+item.contenttweaker.fusion_catalyst.name=Fusion Catalyst
+item.contenttweaker.titanium_sponge.name=Titanium Sponge
+item.contenttweaker.entropy_ash.name=Entropy Ash
+item.contenttweaker.entropy_core.name=Entropy Core
+
+fluid.crude_life_essence.name=Crude Life Essence
+fluid.refined_life_essence.name=Refined Life Essence
+fluid.titanium_tetrachloride.name=Titanium Tetrachloride
+item.contenttweaker.scrap_crystal.name=Scrap Crystal
+fluid.molten_scrap.name=Molten Scrap

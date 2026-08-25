@@ -273,60 +273,60 @@ remakeChest("Any Chest", <minecraft:chest>, logsFiltered);
 	[<harvestcraft:hardenedleatheritem>, <ore:enderpearl>, <harvestcraft:hardenedleatheritem>], 
 	[<ore:ingotArdite>, <darkutils:material>, <ore:ingotArdite>]]);
 
-# Cauldron
-	recipes.remove(<minecraft:cauldron>);
-	recipes.addShapedMirrored("Iron Cauldron", 
-	<minecraft:cauldron>, 
-	[[<ore:plateIron>, null, <ore:plateIron>],
-	[<ore:plateIron>, null, <ore:plateIron>], 
-	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>]]);
+# Cauldron - week4: replaced by week4/week4_recipes.zs (W4 Iron Cauldron)
+#	recipes.remove(<minecraft:cauldron>);
+#	recipes.addShapedMirrored("Iron Cauldron",
+#	<minecraft:cauldron>,
+#	[[<ore:plateIron>, null, <ore:plateIron>],
+#	[<ore:plateIron>, null, <ore:plateIron>],
+#	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>]]);
 
-	recipes.addShapedMirrored("Aluminum Cauldron", 
-	<minecraft:cauldron>, 
-	[[<ore:plateAluminum>, null, <ore:plateAluminum>],
-	[<ore:plateAluminum>, null, <ore:plateAluminum>], 
-	[<ore:plateAluminum>, <ore:plateAluminum>, <ore:plateAluminum>]]);
+#	recipes.addShapedMirrored("Aluminum Cauldron",
+#	<minecraft:cauldron>,
+#	[[<ore:plateAluminum>, null, <ore:plateAluminum>],
+#	[<ore:plateAluminum>, null, <ore:plateAluminum>],
+#	[<ore:plateAluminum>, <ore:plateAluminum>, <ore:plateAluminum>]]);
 
-# Furnace
-	recipes.remove(<minecraft:furnace>);
-	recipes.addShapedMirrored("Furnace", 
-	<minecraft:furnace>, 
-	[[<ore:compressed1xCobblestone>, <ore:cobblestone>, <ore:compressed1xCobblestone>],
-	[<ore:gearStone>, <minecraft:coal:*>, <ore:gearStone>], 
-	[<ore:compressed1xCobblestone>, <ore:cobblestone>, <ore:compressed1xCobblestone>]]);
+# Furnace - week4: replaced by week4/week4_recipes.zs (W4 Furnace)
+#	recipes.remove(<minecraft:furnace>);
+#	recipes.addShapedMirrored("Furnace",
+#	<minecraft:furnace>,
+#	[[<ore:compressed1xCobblestone>, <ore:cobblestone>, <ore:compressed1xCobblestone>],
+#	[<ore:gearStone>, <minecraft:coal:*>, <ore:gearStone>],
+#	[<ore:compressed1xCobblestone>, <ore:cobblestone>, <ore:compressed1xCobblestone>]]);
 
-# Hopper
-	recipes.remove(<minecraft:hopper>);
-	recipes.addShaped("Hopper Aluminum",
-	<minecraft:hopper>, 
-	[[<ore:plateAluminum>, null, <ore:plateAluminum>],
-	[<ore:plateAluminum>, <ore:chest>, <ore:plateAluminum>], 
-	[null, <ore:plateAluminum>, null]]);
+# Hopper - week4: replaced by week4/week4_recipes.zs (W4 Hopper Aluminum)
+#	recipes.remove(<minecraft:hopper>);
+#	recipes.addShaped("Hopper Aluminum",
+#	<minecraft:hopper>,
+#	[[<ore:plateAluminum>, null, <ore:plateAluminum>],
+#	[<ore:plateAluminum>, <ore:chest>, <ore:plateAluminum>],
+#	[null, <ore:plateAluminum>, null]]);
 	
-	recipes.addShaped("Hopper Iron",
-	<minecraft:hopper>, 
-	[[<ore:plateIron>, null, <ore:plateIron>],
-	[<ore:plateIron>, <ore:chest>, <ore:plateIron>], 
-	[null, <ore:plateIron>, null]]);
+#	recipes.addShaped("Hopper Iron",
+#	<minecraft:hopper>,
+#	[[<ore:plateIron>, null, <ore:plateIron>],
+#	[<ore:plateIron>, <ore:chest>, <ore:plateIron>],
+#	[null, <ore:plateIron>, null]]);
 	
-# Sticks
-	recipes.remove(<minecraft:stick>);
-	recipes.addShapedMirrored("Sticks", 
-	<minecraft:stick> * 2, 
-	[[<ore:plankWood>], 
-	[<ore:plankWood>]]);
+# Sticks - week4: replaced by week4/week4_recipes.zs (W4 Sticks)
+#	recipes.remove(<minecraft:stick>);
+#	recipes.addShapedMirrored("Sticks",
+#	<minecraft:stick> * 2,
+#	[[<ore:plankWood>],
+#	[<ore:plankWood>]]);
 	
-	recipes.addShapedMirrored("Sticks from logs", 
-	<minecraft:stick> * 4, 
-	[[<ore:logWood>],
-	[<ore:logWood>]]);
+#	recipes.addShapedMirrored("Sticks from logs",
+#	<minecraft:stick> * 4,
+#	[[<ore:logWood>],
+#	[<ore:logWood>]]);
 	
-# Bucket
-	recipes.remove(<minecraft:bucket>);
-	recipes.addShaped("Bucket", 
-	<minecraft:bucket>, 
-	[[<ore:plateIron>, null, <ore:plateIron>], 
-	[null, <ore:plateIron>, null]]);
+# Bucket - week4: replaced by week4/week4_recipes.zs (W4 Bucket)
+#	recipes.remove(<minecraft:bucket>);
+#	recipes.addShaped("Bucket",
+#	<minecraft:bucket>,
+#	[[<ore:plateIron>, null, <ore:plateIron>],
+#	[null, <ore:plateIron>, null]]);
 					
 # *======= Metal Nuggets =======*
 

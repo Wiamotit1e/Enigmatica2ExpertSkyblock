@@ -185,20 +185,20 @@ for input, output in itemsToUnify {
 	[<nuclearcraft:fission_block>, <mekanism:basicblock:8>, <nuclearcraft:fission_block>], 
 	[<actuallyadditions:block_misc:7>, <nuclearcraft:fission_block>, <actuallyadditions:block_misc:7>]]);
 
-# Reactor Controller
-	recipes.remove(<mekanismgenerators:reactor>);
-	recipes.addShaped(<mekanismgenerators:reactor>, 
-	[[<ore:circuitUltimate>, ultimateGasTank, <ore:circuitUltimate>],
-	[<mekanismgenerators:reactor:1>, <nuclearcraft:fusion_core>, <mekanismgenerators:reactor:1>], 
-	[<mekanismgenerators:reactor:1>, <mekanismgenerators:reactor:1>, <mekanismgenerators:reactor:1>]]);
+# Reactor Controller - week4: replaced by week4/week4_recipes.zs (W4 Fusion Reactor)
+#	recipes.remove(<mekanismgenerators:reactor>);
+#	recipes.addShaped(<mekanismgenerators:reactor>,
+#	[[<ore:circuitUltimate>, ultimateGasTank, <ore:circuitUltimate>],
+#	[<mekanismgenerators:reactor:1>, <nuclearcraft:fusion_core>, <mekanismgenerators:reactor:1>],
+#	[<mekanismgenerators:reactor:1>, <mekanismgenerators:reactor:1>, <mekanismgenerators:reactor:1>]]);
 	
-# Steel Casing
-	recipes.remove(<mekanism:basicblock:8>);
-	recipes.addShaped("Steel Casing", 
-	<mekanism:basicblock:8> * 2, 
-	[[<ore:ingotOsmium>, <ore:blockOsmium>, <ore:ingotOsmium>],
-	[<immersiveengineering:material:9>, <immersiveengineering:stone_decoration:2>, <immersiveengineering:material:9>], 
-	[<ore:ingotOsmium>, <ore:blockOsmium>, <ore:ingotOsmium>]]);
+# Steel Casing - week4: replaced by week4/week4_recipes.zs (W4 Steel Casing)
+#	recipes.remove(<mekanism:basicblock:8>);
+#	recipes.addShaped("Steel Casing",
+#	<mekanism:basicblock:8> * 2,
+#	[[<ore:ingotOsmium>, <ore:blockOsmium>, <ore:ingotOsmium>],
+#	[<immersiveengineering:material:9>, <immersiveengineering:stone_decoration:2>, <immersiveengineering:material:9>],
+#	[<ore:ingotOsmium>, <ore:blockOsmium>, <ore:ingotOsmium>]]);
 	
 # Metallurgic Infuser
 	recipes.remove(<mekanism:machineblock:8>);
@@ -240,25 +240,25 @@ for input, output in itemsToUnify {
 	[<thermalexpansion:frame>, <mekanism:robit>.anyDamage(), <thermalexpansion:frame>], 
 	[<mekanism:machineblock:11>, <computercraft:computer>.anyDamage(), <mekanism:machineblock:11>]]);
 
-# Advanced Circuit
-	recipes.remove(<mekanism:controlcircuit:1>);
-	recipes.addShapedMirrored("Advanced Circuit",
-	<mekanism:controlcircuit:1>, 
-	[[<ore:alloyBasic>, <ore:alloyAdvanced>, <ore:alloyBasic>],
-	[<ore:alloyAdvanced>, <ore:circuitBasic>, <ore:alloyAdvanced>], 
-	[<ore:alloyBasic>, <ore:alloyAdvanced>, <ore:alloyBasic>]]);
+# Advanced Circuit - week4: replaced by week4/week4_recipes.zs (W4 Advanced Circuit)
+#	recipes.remove(<mekanism:controlcircuit:1>);
+#	recipes.addShapedMirrored("Advanced Circuit",
+#	<mekanism:controlcircuit:1>,
+#	[[<ore:alloyBasic>, <ore:alloyAdvanced>, <ore:alloyBasic>],
+#	[<ore:alloyAdvanced>, <ore:circuitBasic>, <ore:alloyAdvanced>],
+#	[<ore:alloyBasic>, <ore:alloyAdvanced>, <ore:alloyBasic>]]);
 
-# Elite Circuit
-	recipes.remove(<mekanism:controlcircuit:2>);
-	recipes.addShaped("Elite Circuit",
-	<mekanism:controlcircuit:2>, 
-	[[<ore:alloyBasic>, <ore:alloyElite>, <ore:alloyBasic>],
-	[<ore:alloyElite>, <ore:circuitAdvanced>, <ore:alloyElite>], 
-	[<ore:alloyBasic>, <ore:alloyElite>, <ore:alloyBasic>]]);
+# Elite Circuit - week4: replaced by week4/week4_recipes.zs (W4 Elite Circuit)
+#	recipes.remove(<mekanism:controlcircuit:2>);
+#	recipes.addShaped("Elite Circuit",
+#	<mekanism:controlcircuit:2>,
+#	[[<ore:alloyBasic>, <ore:alloyElite>, <ore:alloyBasic>],
+#	[<ore:alloyElite>, <ore:circuitAdvanced>, <ore:alloyElite>],
+#	[<ore:alloyBasic>, <ore:alloyElite>, <ore:alloyBasic>]]);
 
-# Ultimate Circuit
-	recipes.remove(<mekanism:controlcircuit:3>);
-	mods.actuallyadditions.Empowerer.addRecipe(<mekanism:controlcircuit:3>, <mekanism:controlcircuit:2>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, 500000, 100, [0.5, 0.3, 0.2]);
+# Ultimate Circuit - week4: replaced by week4/week4_recipes.zs (W4 Ultimate Circuit)
+#	recipes.remove(<mekanism:controlcircuit:3>);
+#	mods.actuallyadditions.Empowerer.addRecipe(<mekanism:controlcircuit:3>, <mekanism:controlcircuit:2>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, 500000, 100, [0.5, 0.3, 0.2]);
 
 # Removing unused ores & Walkietalkie
 	rh(<mekanism:oreblock:1>);

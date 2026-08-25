@@ -172,13 +172,13 @@ craft.remake(<enderio:block_impulse_hopper>, ["pretty",
 	[<ore:dyeMachine>, <enderio:item_material>, <ore:dyeMachine>], 
 	[<enderio:block_reinforced_obsidian>, <ore:dyeMachine>, <enderio:block_reinforced_obsidian>]]);
 
-# Basic Capacitor
-	recipes.remove(<enderio:item_basic_capacitor>);
-	recipes.addShapedMirrored("Basic Capacitor", 
-	<enderio:item_basic_capacitor> * 2, 
-	[[null, <thermalfoundation:material:514>, <ore:dustBedrock>],
-	[<thermalfoundation:material:514>, <immersiveengineering:metal_device0:2>, <thermalfoundation:material:514>], 
-	[<ore:dustBedrock>, <thermalfoundation:material:514>, null]]);
+# Basic Capacitor - week4: replaced by week4/week4_recipes.zs (W4 Basic Capacitor)
+#	recipes.remove(<enderio:item_basic_capacitor>);
+#	recipes.addShapedMirrored("Basic Capacitor",
+#	<enderio:item_basic_capacitor> * 2,
+#	[[null, <thermalfoundation:material:514>, <ore:dustBedrock>],
+#	[<thermalfoundation:material:514>, <immersiveengineering:metal_device0:2>, <thermalfoundation:material:514>],
+#	[<ore:dustBedrock>, <thermalfoundation:material:514>, null]]);
 
 # Double-Layer Capacitor
 	recipes.remove(<enderio:item_basic_capacitor:1>);
@@ -188,13 +188,13 @@ craft.remake(<enderio:block_impulse_hopper>, ["pretty",
 	[<enderio:item_basic_capacitor>, <ore:dustCoke>, <enderio:item_basic_capacitor>], 
 	[null, <ore:ingotEnergeticAlloy>, null]]);
 
-# Octadic Capacitor
-	recipes.remove(<enderio:item_basic_capacitor:2>);
-	recipes.addShapedMirrored("Octadic Capacitor", 
-	<enderio:item_basic_capacitor:2>, 
-	[[<ore:ingotFerroboron>, <ore:ingotVibrantAlloy>, <ore:ingotFerroboron>],
-	[<enderio:item_basic_capacitor:1>, <draconicevolution:draconium_block:1>, <enderio:item_basic_capacitor:1>], 
-	[<ore:ingotFerroboron>, <ore:ingotVibrantAlloy>, <ore:ingotFerroboron>]]);
+# Octadic Capacitor - week4: replaced by week4/week4_recipes.zs (W4 Octadic Capacitor)
+#	recipes.remove(<enderio:item_basic_capacitor:2>);
+#	recipes.addShapedMirrored("Octadic Capacitor",
+#	<enderio:item_basic_capacitor:2>,
+#	[[<ore:ingotFerroboron>, <ore:ingotVibrantAlloy>, <ore:ingotFerroboron>],
+#	[<enderio:item_basic_capacitor:1>, <draconicevolution:draconium_block:1>, <enderio:item_basic_capacitor:1>],
+#	[<ore:ingotFerroboron>, <ore:ingotVibrantAlloy>, <ore:ingotFerroboron>]]);
 
 # Stirling Generator
 	recipes.remove(<enderio:block_stirling_generator>);

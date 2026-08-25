@@ -135,6 +135,16 @@ for item in thaumcraftHintItems {
 # Small Plate Press
 	addDescription(<advancedrocketry:platepress>, "The Small Plate Presser can convert blocks into Plates and Rods. It's a multiblock, 3 blocks tall and 1 wide. The top block is the Small Plate Presser and the bottom is a block of Obsidian. You place the block you want to compress between the two, and apply a redstone signal to activate the Presser.");
 
+# Week 4 - the Fourth Cycle
+	<contenttweaker:coarse_mechanism>.addTooltip("It should not work. It does anyway.");
+	addDescription(<contenttweaker:coarse_mechanism>, "It should not work. It does anyway.");
+	<contenttweaker:circuit_substrate>.addTooltip("Circuits are etched into stone. Progress is etched into you.");
+	addDescription(<contenttweaker:circuit_substrate>, "Circuits are etched into stone. Progress is etched into you.");
+	<contenttweaker:thermal_prism>.addTooltip("It does not create heat. It remembers it.");
+	addDescription(<contenttweaker:thermal_prism>, "It does not create heat. It remembers it.");
+	<contenttweaker:fusion_catalyst>.addTooltip("A caged star. Handle it like a prayer.");
+	addDescription(<contenttweaker:fusion_catalyst>, "A caged star. Handle it like a prayer.");
+
 # Tool Forge
 	addDescription(<tconstruct:toolforge>.withTag({textureBlock: {id: "enderio:block_alloy", Count: 1 as byte, Damage: 0 as short}}), "The Tool Forge can be crafted with any 4 Metal Blocks.");
 	<tconstruct:toolforge>.anyDamage().addTooltip(format.red("(The Tool Forge can be crafted with any 4 Metal Blocks)"));
@@ -523,11 +533,11 @@ for item in thaumcraftHintItems {
 		"actuallyadditions:block_misc",           "9",     "1600",
 		"actuallyadditions:item_misc",            "8",     "600",
 		"computercraft:computer",                 "16384", "600",
-		"draconicevolution:chaos_shard",          "0",     "600000",
-		"draconicevolution:chaos_shard",          "1",     "66667",
-		"draconicevolution:chaos_shard",          "2",     "7407",
-		"draconicevolution:chaos_shard",          "3",     "823",
-		"draconicevolution:dragon_heart",         "0",     "200000",
+		"draconicevolution:chaos_shard",          "0",     "12000000",
+		"draconicevolution:chaos_shard",          "1",     "1333340",
+		"draconicevolution:chaos_shard",          "2",     "148140",
+		"draconicevolution:chaos_shard",          "3",     "16460",
+		"draconicevolution:dragon_heart",         "0",     "4000000",
 		"draconicevolution:fusion_crafting_core", "0",     "100000",
 		"environmentaltech:litherite_crystal",    "0",     "6000",
 		"forestry:hardened_machine",              "0",     "1800",

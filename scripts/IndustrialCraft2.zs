@@ -140,25 +140,25 @@ import mods.ic2.ScrapBox;
 	[<ore:plateDenseLead>, <ic2:resource:12>, <ore:plateDenseLead>], 
 	[null, <ore:plateDenseLead>, null]]);
 
-# Basic Machine Casing
-	recipes.remove(<ic2:resource:12>);
-	recipes.addShapedMirrored("Basic Machine Casing1", 
-	<ic2:resource:12> * 4, 
-	[[<ore:plateAluminum>, <tconstruct:large_plate>.withTag({Material: "iron"}), <ore:plateAluminum>],
-	[<tconstruct:large_plate>.withTag({Material: "iron"}), null, <tconstruct:large_plate>.withTag({Material: "iron"})], 
-	[<ore:plateAluminum>, <tconstruct:large_plate>.withTag({Material: "iron"}), <ore:plateAluminum>]]);
+# Basic Machine Casing - week4: replaced by week4/week4_recipes.zs (W4 Basic Machine Casing1-3)
+#	recipes.remove(<ic2:resource:12>);
+#	recipes.addShapedMirrored("Basic Machine Casing1",
+#	<ic2:resource:12> * 4,
+#	[[<ore:plateAluminum>, <tconstruct:large_plate>.withTag({Material: "iron"}), <ore:plateAluminum>],
+#	[<tconstruct:large_plate>.withTag({Material: "iron"}), null, <tconstruct:large_plate>.withTag({Material: "iron"})],
+#	[<ore:plateAluminum>, <tconstruct:large_plate>.withTag({Material: "iron"}), <ore:plateAluminum>]]);
 	
-	recipes.addShapedMirrored("Basic Machine Casing2", 
-	<ic2:resource:12> * 4, 
-	[[<ore:plateAluminum>, <ore:plateDenseIron>, <ore:plateAluminum>],
-	[<ore:plateDenseIron>, null, <ore:plateDenseIron>], 
-	[<ore:plateAluminum>, <ore:plateDenseIron>, <ore:plateAluminum>]]);
+#	recipes.addShapedMirrored("Basic Machine Casing2",
+#	<ic2:resource:12> * 4,
+#	[[<ore:plateAluminum>, <ore:plateDenseIron>, <ore:plateAluminum>],
+#	[<ore:plateDenseIron>, null, <ore:plateDenseIron>],
+#	[<ore:plateAluminum>, <ore:plateDenseIron>, <ore:plateAluminum>]]);
 	
-	recipes.addShapedMirrored("Basic Machine Casing3", 
-	<ic2:resource:12> * 4, 
-	[[<ore:plateAluminum>, <ore:plateDenseTin>, <ore:plateAluminum>],
-	[<ore:plateDenseTin>, null, <ore:plateDenseTin>], 
-	[<ore:plateAluminum>, <ore:plateDenseTin>, <ore:plateAluminum>]]);
+#	recipes.addShapedMirrored("Basic Machine Casing3",
+#	<ic2:resource:12> * 4,
+#	[[<ore:plateAluminum>, <ore:plateDenseTin>, <ore:plateAluminum>],
+#	[<ore:plateDenseTin>, null, <ore:plateDenseTin>],
+#	[<ore:plateAluminum>, <ore:plateDenseTin>, <ore:plateAluminum>]]);
 
 # Reinforced Stone
 	recipes.addShapedMirrored("Reinforced Stone", 

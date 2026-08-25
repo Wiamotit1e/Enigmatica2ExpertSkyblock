@@ -38,13 +38,13 @@ import mods.jei.JEI.removeAndHide as rh;
 	recipes.addShaped("Wyvern Bow", <draconicevolution:wyvern_bow>, [[<draconicevolution:infused_obsidian>, <draconicevolution:wyvern_core>, <draconicevolution:infused_obsidian>],[<ore:blockDraconium>, <mysticalagriculture:supremium_bow>.anyDamage(), <ore:blockDraconium>], [<draconicevolution:infused_obsidian>, <draconicevolution:wyvern_energy_core>, <draconicevolution:infused_obsidian>]]);
 	recipes.addShaped("Wyvern Axe", <draconicevolution:wyvern_axe>, [[<draconicevolution:infused_obsidian>, <draconicevolution:wyvern_core>, <draconicevolution:infused_obsidian>],[<ore:blockDraconium>, <mysticalagriculture:supremium_axe>.anyDamage(), <ore:blockDraconium>], [<draconicevolution:infused_obsidian>, <draconicevolution:wyvern_energy_core>, <draconicevolution:infused_obsidian>]]);
 
-# Draconic Core
-	recipes.remove(<draconicevolution:draconic_core>);
-	recipes.addShapedMirrored("Draconic Core", 
-	<draconicevolution:draconic_core>, 
-	[[<ore:blockDraconium>, <ore:ingotMelodicAlloy>, <ore:blockDraconium>],
-	[<ore:crystalLitherite>, <gendustry:genetics_processor>, <ore:crystalLitherite>], 
-	[<ore:plateElite>, <draconicevolution:dislocator>, <ore:plateElite>]]);
+# Draconic Core - week4: replaced by week4/week4_recipes.zs (W4 Draconic Core)
+#	recipes.remove(<draconicevolution:draconic_core>);
+#	recipes.addShapedMirrored("Draconic Core",
+#	<draconicevolution:draconic_core>,
+#	[[<ore:blockDraconium>, <ore:ingotMelodicAlloy>, <ore:blockDraconium>],
+#	[<ore:crystalLitherite>, <gendustry:genetics_processor>, <ore:crystalLitherite>],
+#	[<ore:plateElite>, <draconicevolution:dislocator>, <ore:plateElite>]]);
 
 # Wyvern Core
 	recipes.remove(<draconicevolution:wyvern_core>);
@@ -76,7 +76,7 @@ import mods.jei.JEI.removeAndHide as rh;
 	<environmentaltech:erodium>, <environmentaltech:kyronite>, 
 	<environmentaltech:pladium>, <environmentaltech:ionite>, 
 	<environmentaltech:aethium>, <extendedcrafting:storage:3>,
-	<biomesoplenty:terrestrial_artifact>, <thermalexpansion:frame:148>]);
+	<biomesoplenty:terrestrial_artifact>, <thermalexpansion:frame:148>, <contenttweaker:fusion_catalyst>]);
 
 # Wyvern Energy Core
 	recipes.remove(<draconicevolution:wyvern_energy_core>);

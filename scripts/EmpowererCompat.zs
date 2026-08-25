@@ -7,11 +7,12 @@ import mods.jei.JEI.removeAndHide as rh;
 	
 # *======= Empowerer Extended Crafting Combination recipes =======*
 
-# Ultimate Circuit
-	mods.extendedcrafting.CombinationCrafting.addRecipe(<mekanism:controlcircuit:3>, 2000000, 1000000, <mekanism:controlcircuit:2>, [<mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>]);
+# Ultimate Circuit - week4: replaced by week4/week4_recipes.zs (W4 Ultimate Circuit)
+#	mods.extendedcrafting.CombinationCrafting.addRecipe(<mekanism:controlcircuit:3>, 2000000, 1000000, <mekanism:controlcircuit:2>, [<mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>, <mekanism:atomicalloy>]);
 
-# Hardened Cell Frame
-	mods.extendedcrafting.CombinationCrafting.addRecipe(<thermalexpansion:frame:129>, 10000000, 1000000, <thermalexpansion:frame:128>, [<immersiveengineering:material:2>, <thermalfoundation:material:354>, <thermalfoundation:material:290>, <mekanism:basicblock:8>]);
+# Hardened Cell Frame - week4: circuit substrate replaces one ingredient,
+# all three routes (Empowerer / Combination / DE Fusion) stay identical
+	mods.extendedcrafting.CombinationCrafting.addRecipe(<thermalexpansion:frame:129>, 10000000, 1000000, <thermalexpansion:frame:128>, [<immersiveengineering:material:2>, <thermalfoundation:material:354>, <contenttweaker:circuit_substrate>, <mekanism:basicblock:8>]);
 
 # Restonia
 	mods.extendedcrafting.CombinationCrafting.addRecipe(<actuallyadditions:item_crystal_empowered>, 100000, 1000000, <actuallyadditions:item_crystal>, [<nuclearcraft:gem>, <thermalfoundation:material:513>, <tconstruct:tool_rod>.withTag({Material: "ardite"}), <minecraft:red_nether_brick>]);
