@@ -29,20 +29,22 @@ recipes.remove(<advancedrocketry:productingot:0>);
 # begins and ends on the metallurgy multiblock:
 # MM (rutile synth) -> crush -> chlorinate -> MM (Kroll) -> smelt
 
-# Rutile ore must be crushed: any crusher in the pack grinds it to dust
-# (LibVulpes material index: Rutile = 8, Titanium = 7)
-scripts.process.crush(<libvulpes:ore0:8>, <libvulpes:productdust:8> * 2);
+# Rutile ore must be crushed: any crusher in the pack grinds it to
+# titanium dust (the Rutile material only has an ORE product - there
+# is no separate rutile dust)
+scripts.process.crush(<libvulpes:ore0:8>, <libvulpes:productdust:7> * 2);
 
-# Chlorination: two rutile dusts meet liquid chlorine in the NC
+# Chlorination: two titanium dusts meet liquid chlorine in the NC
 # Dissolver and come out as titanium tetrachloride
-mods.nuclearcraft.dissolver.addRecipe(<libvulpes:productdust:8> * 2, <liquid:liquidchlorine> * 500, <liquid:titanium_tetrachloride> * 500);
+mods.nuclearcraft.dissolver.addRecipe(<libvulpes:productdust:7> * 2, <liquid:liquidchlorine> * 500, <liquid:titanium_tetrachloride> * 500);
 
 # Kroll reduction: the tetrachloride meets magnesium on the Advanced
 # Metallurgic Fabricator (see modular_machinery/
 # advanced_metallurgic_fabricator.zs) and becomes titanium sponge
 
-# And only the sponge smelts into titanium
-furnace.addRecipe(<advancedrocketry:productingot:0>, <contenttweaker:titanium_sponge>, 0.7);
+# And only the sponge smelts into titanium (the libvulpes ingot, not
+# the advancedrocketry productingot, which is Titanium Aluminide)
+furnace.addRecipe(<libvulpes:productingot:7>, <contenttweaker:titanium_sponge>, 0.7);
 
 # The smeltery loses every titanium melt (PlusTiC's rutile ore and
 # titanium dust melts included), then regains exactly one: ingots may
