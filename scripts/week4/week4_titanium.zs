@@ -45,9 +45,3 @@ mods.nuclearcraft.dissolver.addRecipe(<libvulpes:productdust:7> * 2, <liquid:liq
 # And only the sponge smelts into titanium (the libvulpes ingot, not
 # the advancedrocketry productingot, which is Titanium Aluminide)
 furnace.addRecipe(<libvulpes:productingot:7>, <contenttweaker:titanium_sponge>, 0.7);
-
-# The smeltery loses every titanium melt (PlusTiC's rutile ore and
-# titanium dust melts included), then regains exactly one: ingots may
-# still melt for casting, but no ore or dust shortcut remains.
-mods.tconstruct.Melting.removeRecipe(<liquid:titanium>);
-mods.tconstruct.Melting.addRecipe(<liquid:titanium> * 144, <ore:ingotTitanium>);
