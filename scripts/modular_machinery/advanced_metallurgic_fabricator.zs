@@ -33,6 +33,9 @@ mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_rutile_ore", mach
 mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_titanium_sponge", machineName, 20)
 	.addEnergyPerTickInput(100000)
 	.addItemOutput(<contenttweaker:titanium_sponge>)
+	.addItemOutput(<contenttweaker:titanium_sponge>)
+	.addItemOutput(<contenttweaker:titanium_sponge>)
+	.addItemOutput(<contenttweaker:titanium_sponge>)
 	.addItemInput(<ore:ingotMagnesium>)
 	.addFluidInput(<liquid:titanium_tetrachloride> * 500)
 	.build();

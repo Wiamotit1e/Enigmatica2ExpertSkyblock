@@ -30,9 +30,10 @@ recipes.remove(<advancedrocketry:productingot:0>);
 # MM (rutile synth) -> crush -> chlorinate -> MM (Kroll) -> smelt
 
 # Rutile ore must be crushed: any crusher in the pack grinds it to
-# titanium dust (the Rutile material only has an ORE product - there
-# is no separate rutile dust)
-scripts.process.crush(<libvulpes:ore0:8>, <libvulpes:productdust:7> * 2);
+# four titanium dusts (the Rutile material only has an ORE product -
+# there is no separate rutile dust). Four dusts, not two: the Kroll
+# chain is the 8x route, that is its advantage over the side doors.
+scripts.process.crush(<libvulpes:ore0:8>, <libvulpes:productdust:7> * 4);
 
 # Chlorination: two titanium dusts meet liquid chlorine in the NC
 # Dissolver and come out as titanium tetrachloride
