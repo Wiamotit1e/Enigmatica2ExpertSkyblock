@@ -1,9 +1,8 @@
 #priority -2
-#modloaded appliedenergistics2 extracells inworldcrafting
+#modloaded appliedenergistics2 extracells nuclearcraft
 
 import crafttweaker.item.IItemStack as IItemStack;
 import crafttweaker.item.IIngredient as IIngredient;
-import mods.inworldcrafting.FluidToItem;
 
 # ######################################################################
 #
@@ -14,13 +13,9 @@ import mods.inworldcrafting.FluidToItem;
 # file gives the acid a second job and fluorine its first:
 #
 # - quartz glass bathed in HF comes out etched - acid-roughened at a
-#   scale only circuits can feel. The bath runs on every fill machine
-#   in the pack (process.fill fan-out): the Tinker's casting table
-#   pours the acid for 1.8x the fluid, the ID drying basins take
-#   1.6x/1.4x, the NC infuser 1.2x, the TE Transposer 1x - the acid
-#   is the gate, the machine is a choice. Or skip the machine: throw
-#   the glass into a world pool of HF (InWorldCrafting FluidToItem)
-#   and let the acid do the work where it stands;
+#   scale only circuits can feel. The NC fluid infuser is the one and
+#   only acid vessel: one machine, and the acid is the gate, so the
+#   bath runs deep (750 mB per glass);
 # - etched glass replaces quartz glass in every ADVANCED storage cell:
 #   AE2 item/fluid/spatial 16k+, ExtraCells physical cells, gas cells
 #   16k+, and the ThE essentia cells 16k+ (week4_thaumicenergistics.zs).
@@ -31,8 +26,6 @@ import mods.inworldcrafting.FluidToItem;
 #   real-world fluoride-glass fiber optic. Fluorine comes from the
 #   pack's HF electrolysis, closing the triangle:
 #   fluorite -> HF -> (etch | electrolyze -> F2 -> fiber).
-#   Outputs are single items: every machine in the fan-out must agree
-#   on the same product.
 #
 # ######################################################################
 
@@ -40,17 +33,14 @@ import mods.inworldcrafting.FluidToItem;
 # The Etch
 # ########################
 
-scripts.process.fill(<appliedenergistics2:quartz_glass>, <liquid:hydrofluoric_acid> * 250, <contenttweaker:etched_quartz_glass>);
-
-# The machine-free bath: quartz glass dropped into a pool of HF
-FluidToItem.transform(<contenttweaker:etched_quartz_glass>, <liquid:hydrofluoric_acid>, [<appliedenergistics2:quartz_glass>]);
+mods.nuclearcraft.infuser.addRecipe(<appliedenergistics2:quartz_glass>, <liquid:hydrofluoric_acid> * 750, <contenttweaker:etched_quartz_glass>);
 
 # ########################
 # The Fiber
 # ########################
 
 recipes.remove(<appliedenergistics2:part:140>);
-scripts.process.fill(<appliedenergistics2:quartz_glass>, <liquid:fluorine> * 125, <appliedenergistics2:part:140>);
+mods.nuclearcraft.infuser.addRecipe(<appliedenergistics2:quartz_glass>, <liquid:fluorine> * 375, <appliedenergistics2:part:140>);
 
 # ########################
 # Etched cell helpers - the pack's cell idiom with etched glass
