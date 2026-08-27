@@ -7,8 +7,9 @@
 # (AppliedEnergistics.zs newCellRecipe): quartz glass + redstone +
 # iron chest + iron plates + component. The shapeless housing route
 # (AE2 storage housing + component, ThE's component2cell recipes)
-# stays untouched. The essentia components keep their original
-# arcane-crafted recipes.
+# stays untouched (the AE2 housing is etched glass now, so the route
+# cannot bypass the acid bath). The essentia components keep their
+# original arcane-crafted recipes.
 # week4: every essentia cell uses the HF-etched glass
 # (week4/week4_hf.zs), like every other storage cell in the pack.
 

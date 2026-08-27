@@ -16,10 +16,12 @@ import crafttweaker.item.IIngredient as IIngredient;
 #   scale only circuits can feel. The NC fluid infuser is the one and
 #   only acid vessel: one machine, and the acid is the gate, so the
 #   bath runs deep (750 mB per glass);
-# - etched glass replaces quartz glass in EVERY storage cell: AE2
-#   item/fluid/spatial cells, ExtraCells physical and gas cells, and
-#   the ThE essentia cells (week4_thaumicenergistics.zs). The storage
-#   housings keep plain glass - shells are plain, cells are etched;
+# - etched glass replaces quartz glass in EVERY storage cell AND the
+#   storage housings: AE2 item/fluid/spatial cells, ExtraCells
+#   physical and gas cells, and the ThE essentia cells
+#   (week4_thaumicenergistics.zs). The housings are etched too -
+#   otherwise the shapeless housing route would bypass the acid bath
+#   entirely. No plain glass anywhere in the storage line;
 # - fluorinated glass: quartz glass bathed in fluorine becomes quartz
 #   fiber (appliedenergistics2:part:140, previously untouched), the
 #   real-world fluoride-glass fiber optic. Fluorine comes from the
@@ -76,6 +78,31 @@ function etchGas(input as IIngredient, output as IItemStack) {
         [<ore:plateGold>, <ironchest:iron_chest:1>, <ore:plateGold>]]);
     recipes.addShapeless("W4 Shapeless - " ~ output.displayName, output, [<extracells:storage.casing:2>, input]);
 }
+
+# ########################
+# Storage housings - etched glass, so the shapeless route stays honest
+# ########################
+
+# Standard housing: the pack's newCellRecipe shape, center empty
+recipes.remove(<appliedenergistics2:material:39>);
+recipes.addShaped("W4 Etched Storage Housing", <appliedenergistics2:material:39>,
+    [[<contenttweaker:etched_quartz_glass>, <ore:dustRedstone>, <contenttweaker:etched_quartz_glass>],
+    [<ore:dustRedstone>, null, <ore:dustRedstone>],
+    [<ore:plateIron>, <ironchest:iron_chest>, <ore:plateIron>]]);
+
+# Physical cell housing
+recipes.remove(<extracells:storage.casing>);
+recipes.addShaped("W4 Etched Physical Housing", <extracells:storage.casing>,
+    [[<contenttweaker:etched_quartz_glass>, <appliedenergistics2:material:8>, <contenttweaker:etched_quartz_glass>],
+    [<appliedenergistics2:material:8>, null, <appliedenergistics2:material:8>],
+    [<ironchest:iron_chest:2>, <ironchest:iron_chest:2>, <ironchest:iron_chest:2>]]);
+
+# Gas cell housing
+recipes.remove(<extracells:storage.casing:2>);
+recipes.addShaped("W4 Etched Gas Housing", <extracells:storage.casing:2>,
+    [[<contenttweaker:etched_quartz_glass>, <appliedenergistics2:material:8>, <contenttweaker:etched_quartz_glass>],
+    [<appliedenergistics2:material:8>, null, <appliedenergistics2:material:8>],
+    [<ore:plateGold>, <ironchest:iron_chest:1>, <ore:plateGold>]]);
 
 # ########################
 # Storage cells - etched glass, every one of them

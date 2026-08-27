@@ -57,10 +57,12 @@ mods.actuallyadditions.Crusher.removeRecipe(<appliedenergistics2:material>);
 	}
 
 # ---=== Storage Housings ===---
+# week4: moved to week4/week4_hf.zs (etched quartz glass - the housing
+# route must not bypass the acid bath)
 
-  newCellRecipe(null, <appliedenergistics2:material:39>);
-  newAdvCellRecipe(null, <extracells:storage.casing>);
-  newGasCellRecipe(null, <extracells:storage.casing:2>);
+#  newCellRecipe(null, <appliedenergistics2:material:39>);
+#  newAdvCellRecipe(null, <extracells:storage.casing>);
+#  newGasCellRecipe(null, <extracells:storage.casing:2>);
 
 # ---=== Basic Cells ===---
 # week4: ALL cell recipes moved to week4/week4_hf.zs (etched quartz
