@@ -1,9 +1,9 @@
 #priority -2
-#modloaded appliedenergistics2 extracells thermalexpansion
+#modloaded appliedenergistics2 extracells inworldcrafting
 
 import crafttweaker.item.IItemStack as IItemStack;
 import crafttweaker.item.IIngredient as IIngredient;
-import mods.thermalexpansion.Transposer;
+import mods.inworldcrafting.FluidToItem;
 
 # ######################################################################
 #
@@ -13,9 +13,14 @@ import mods.thermalexpansion.Transposer;
 # fluorite chain feeds the HF electrolysis in NuclearCraft.zs); this
 # file gives the acid a second job and fluorine its first:
 #
-# - the Transposer is the pack's wet lab (corium brews live here too):
-#   quartz glass bathed in HF comes out etched - acid-roughened at a
-#   scale only circuits can feel;
+# - quartz glass bathed in HF comes out etched - acid-roughened at a
+#   scale only circuits can feel. The bath runs on every fill machine
+#   in the pack (process.fill fan-out): the Tinker's casting table
+#   pours the acid for 1.8x the fluid, the ID drying basins take
+#   1.6x/1.4x, the NC infuser 1.2x, the TE Transposer 1x - the acid
+#   is the gate, the machine is a choice. Or skip the machine: throw
+#   the glass into a world pool of HF (InWorldCrafting FluidToItem)
+#   and let the acid do the work where it stands;
 # - etched glass replaces quartz glass in every ADVANCED storage cell:
 #   AE2 item/fluid/spatial 16k+, ExtraCells physical cells, gas cells
 #   16k+, and the ThE essentia cells 16k+ (week4_thaumicenergistics.zs).
@@ -26,6 +31,8 @@ import mods.thermalexpansion.Transposer;
 #   real-world fluoride-glass fiber optic. Fluorine comes from the
 #   pack's HF electrolysis, closing the triangle:
 #   fluorite -> HF -> (etch | electrolyze -> F2 -> fiber).
+#   Outputs are single items: every machine in the fan-out must agree
+#   on the same product.
 #
 # ######################################################################
 
@@ -33,16 +40,17 @@ import mods.thermalexpansion.Transposer;
 # The Etch
 # ########################
 
-Transposer.addFillRecipe(<contenttweaker:etched_quartz_glass>,
-<appliedenergistics2:quartz_glass>, <liquid:hydrofluoric_acid> * 250, 4000);
+scripts.process.fill(<appliedenergistics2:quartz_glass>, <liquid:hydrofluoric_acid> * 250, <contenttweaker:etched_quartz_glass>);
+
+# The machine-free bath: quartz glass dropped into a pool of HF
+FluidToItem.transform(<contenttweaker:etched_quartz_glass>, <liquid:hydrofluoric_acid>, [<appliedenergistics2:quartz_glass>]);
 
 # ########################
 # The Fiber
 # ########################
 
 recipes.remove(<appliedenergistics2:part:140>);
-Transposer.addFillRecipe(<appliedenergistics2:part:140> * 4,
-<appliedenergistics2:quartz_glass>, <liquid:fluorine> * 250, 4000);
+scripts.process.fill(<appliedenergistics2:quartz_glass>, <liquid:fluorine> * 125, <appliedenergistics2:part:140>);
 
 # ########################
 # Etched cell helpers - the pack's cell idiom with etched glass
