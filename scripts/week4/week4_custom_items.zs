@@ -24,6 +24,7 @@ function buildFluid(name as string, color as int) {
 buildItem("coarse_mechanism");               # Crude Mechanism, early game
 buildItem("circuit_substrate");              # Machine Circuit Substrate, mid game
 buildItem("thermal_prism");                  # Thermal Prism, mid-late game
+buildItem("etched_quartz_glass");            # Etched Quartz Glass, HF-etched substrate for advanced storage cells
 buildItem("fusion_catalyst");                # Fusion Catalyst, late game
 buildItem("titanium_sponge");                 # Titanium Sponge, Kroll-reduced titanium intermediate
 buildItem("entropy_ash");                     # Entropy Ash, trash ground into disorder
