@@ -5,40 +5,36 @@
 #
 # week4_titanium.zs
 #
-# The titanium rework. No more smelting rutile straight into titanium,
-# no more crafting the ingot from nuggets, and the old one-step
+# The titanium rework. The old one-step
 # multiblock recipe (magnesium + salt + carbon + chlorine -> titanium)
 # is gone. The full Kroll line:
 #
-# 9 nuggets -> rutile ore -> (crush) -> rutile dust
-#   -> (NC Dissolver + liquid chlorine) -> titanium tetrachloride
+#   rutile ore -> (Macerator) -> crushed -> (Ore Washer) -> purified
+#   -> (NC Dissolver + liquid chlorine) -> titanium tetrachloride x2
 #   -> (Advanced Metallurgic Fabricator + magnesium) -> titanium sponge
 #   -> (furnace) -> titanium ingot
 #
+# The chemistry only accepts JAOPCA purified crushed titanium: titanium
+# dust has too many alternative sources to anchor the 8x yield, so dust
+# is a material, not a feedstock.
+#
 # ######################################################################
-
-# The old direct smelt dies
-furnace.remove(<libvulpes:ore0:8>);
-
-# The old ingot crafts die (nugget compression, block decompression)
-recipes.remove(<advancedrocketry:productingot:0>);
 
 # Rutile ore is synthesized on the Advanced Metallurgic Fabricator
 # (magnesium ore + salt + carbon plate + liquid chlorine), the same
 # machine that later performs the Kroll reduction - the titanium line
 # begins and ends on the metallurgy multiblock:
-# MM (rutile synth) -> crush -> chlorinate -> MM (Kroll) -> smelt
+# MM (rutile synth) -> crush -> purify -> chlorinate -> MM (Kroll) -> smelt
 
-# Rutile ore must be crushed: any crusher in the pack grinds it to
-# the natural two titanium dusts (the Rutile material only has an ORE
-# product - there is no separate rutile dust)
-scripts.process.crush(<libvulpes:ore0:8>, <libvulpes:productdust:7> * 2);
+# Every crusher except the IC2 Macerator grinds rutile straight into
+# two titanium dusts. The Macerator keeps JAOPCA's recipe (rutile ->
+# crushed) so the purified-crushed IC2 chain stays intact.
+scripts.process.crush(<libvulpes:ore0:8>, <libvulpes:productdust:7> * 2, "Except: Macerator");
 
-# Chlorination: two titanium dusts meet liquid chlorine in the NC
-# Dissolver and come out as a full bucket of titanium tetrachloride.
-# The 8x yield lives in the chemistry, not in the crusher: two batches
-# of Kroll reduction run off each bucket.
-mods.nuclearcraft.dissolver.addRecipe(<libvulpes:productdust:7> * 2, <liquid:liquidchlorine> * 500, <liquid:titanium_tetrachloride> * 1000);
+# Chlorination: one purified crushed titanium meets liquid chlorine in
+# the NC Dissolver and comes out as two buckets of titanium
+# tetrachloride. Four batches of Kroll reduction run off each purified.
+mods.nuclearcraft.dissolver.addRecipe(<jaopca:item_crushedpurifiedtitanium>, <liquid:liquidchlorine> * 1000, <liquid:titanium_tetrachloride> * 1000);
 
 # Kroll reduction: the tetrachloride meets magnesium on the Advanced
 # Metallurgic Fabricator (see modular_machinery/

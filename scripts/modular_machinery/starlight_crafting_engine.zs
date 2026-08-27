@@ -51,3 +51,10 @@ mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_prism_remake", ma
 	.addItemInput(<astralsorcery:itemcraftingcomponent:4>)
 	.addItemInput(<ore:dustAstralStarmetal>, 2)
 	.build();
+
+# Resonating Crystal - mirrors the Luminous Crafting Table recipe
+mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_resonating_crystal", machineName, 120)
+	.addItemOutput(<threng:material:5>)
+	.addItemInput(<ore:gemDiamond>)
+	.addItemInput(<ore:dustEnderPearl>, 4)
+	.build();

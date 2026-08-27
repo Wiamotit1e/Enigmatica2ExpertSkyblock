@@ -51,21 +51,3 @@ ExplosionCrafting.explodeItemRecipe(<randomthings:obsidianskull>, <threng:materi
 # Ritual flavor
 <threng:material:13>.addTooltip("It explodes into futures. Detonate with care.");
 <threng:material:14>.addTooltip("It dreams of futures that might be. Detonate with care.");
-
-# ########################
-# The Scrap Vein Blast
-# ########################
-
-# Detonate a Scrap Crystal: the blast sorts compressed waste into the
-# mineral veins that were hiding inside it. The ore that was in your
-# cobblestone all along, if you believe hard enough.
-ExplosionCrafting.explodeItemRecipe(<minecraft:iron_ore> * 8, <contenttweaker:scrap_crystal>, 30);
-ExplosionCrafting.explodeItemRecipe(<minecraft:gold_ore> * 4, <contenttweaker:scrap_crystal>, 25);
-ExplosionCrafting.explodeItemRecipe(<minecraft:redstone_ore> * 8, <contenttweaker:scrap_crystal>, 15);
-ExplosionCrafting.explodeItemRecipe(<minecraft:lapis_ore> * 8, <contenttweaker:scrap_crystal>, 10);
-ExplosionCrafting.explodeItemRecipe(<minecraft:diamond_ore> * 2, <contenttweaker:scrap_crystal>, 8);
-ExplosionCrafting.explodeItemRecipe(<minecraft:emerald_ore> * 2, <contenttweaker:scrap_crystal>, 6);
-ExplosionCrafting.explodeItemRecipe(<minecraft:coal_block> * 4, <contenttweaker:scrap_crystal>, 4);
-ExplosionCrafting.explodeItemRecipe(<minecraft:bedrock>, <contenttweaker:scrap_crystal>, 2);
-
-<contenttweaker:scrap_crystal>.addTooltip("A vein of ore, folded a thousand times. Detonate to unfold.");

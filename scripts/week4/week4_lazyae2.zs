@@ -17,22 +17,28 @@ import mods.botania.RuneAltar;
 #
 # week4_lazyae2.zs
 #
-# Lazy AE2 (threng) rework: the six standalone machines are deleted -
-# nothing in the pack uses them - and every material gets a recipe on
-# a different machine of the pack instead of a crafting grid. The Mass
+# Lazy AE2 (threng) rework: five of the six standalone machines are
+# deleted - the ME Level Maintainer (meta 4) stays craftable and visible
+# with its vanilla recipe intact - and every material gets a recipe on a
+# different machine of the pack instead of a crafting grid. The Mass
 # Assembler multiblock stays untouched and keeps consuming fluix steel,
 # logic units and massively parallel processors.
 #
 # ######################################################################
 
 # ########################
-# Delete the six machines
+# Delete five of the six machines
 # ########################
 
+# Meta 4 (ME Level Maintainer) is kept: it is the auto-stocking machine
+# and must stay craftable and visible in JEI. Meta 5 (Crystal Energizer)
+# is deleted like the other four.
 for i in 0 to 5 {
-	val machine as IItemStack = <threng:machine>.definition.makeStack(i);
-	recipes.remove(machine);
-	rh(machine);
+	if (i != 4) {
+		val machine as IItemStack = <threng:machine>.definition.makeStack(i);
+		recipes.remove(machine);
+		rh(machine);
+	}
 }
 
 # The inscriber press recipe for fluix-plated iron dies with the etcher

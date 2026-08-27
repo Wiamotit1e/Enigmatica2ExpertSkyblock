@@ -9,11 +9,10 @@ item.contenttweaker.circuit_substrate.name=机器电路基板
 item.contenttweaker.thermal_prism.name=导热棱镜
 item.contenttweaker.fusion_catalyst.name=聚变催化剂
 item.contenttweaker.titanium_sponge.name=海绵钛
-item.contenttweaker.entropy_ash.name=熵烬
-item.contenttweaker.entropy_core.name=熵核
-
 fluid.crude_life_essence.name=粗制生命精华
 fluid.refined_life_essence.name=精炼生命精华
 fluid.titanium_tetrachloride.name=四氯化钛
-item.contenttweaker.scrap_crystal.name=废料结晶
-fluid.molten_scrap.name=熔融废料
+fluid.uu_solution.name=UU溶液
+
+item.contenttweaker.entropy_ash.name=熵烬
+item.contenttweaker.entropy_core.name=熵核

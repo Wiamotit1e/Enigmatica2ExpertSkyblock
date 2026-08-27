@@ -41,10 +41,11 @@ import mods.jei.JEI.removeAndHide as rh;
 	recipes.addShaped(<redstonearsenal:armor.plate_flux>, [[<redstonearsenal:material:224>, <ic2:nano_chestplate>|<ic2:nano_chestplate:*>, <redstonearsenal:material:224>],[<redstonearsenal:material:224>, <redstonearsenal:material:224>, <redstonearsenal:material:224>], [<redstonearsenal:material:224>, <redstonearsenal:material:224>, <redstonearsenal:material:224>]]);
 	recipes.addShaped(<redstonearsenal:armor.helmet_flux>, [[<redstonearsenal:material:224>, <redstonearsenal:material:224>, <redstonearsenal:material:224>],[<redstonearsenal:material:224>, <ic2:nano_helmet>|<ic2:nano_helmet:*>, <redstonearsenal:material:224>], [null, null, null]]);
 	
-	recipes.addShaped(<ic2:quantum_boots>, [[null, null, null],[<ic2:crafting:4>, <redstonearsenal:armor.boots_flux>.anyDamage(), <ic2:crafting:4>], [<ic2:rubber_boots>, <ic2:lapotron_crystal>|<ic2:lapotron_crystal:*>, <ic2:rubber_boots>]]);
-	recipes.addShaped(<ic2:quantum_leggings>, [[<ic2:crafting:3>, <ic2:lapotron_crystal>|<ic2:lapotron_crystal:*>, <ic2:crafting:3>],[<ic2:crafting:4>, <redstonearsenal:armor.legs_flux>.anyDamage(), <ic2:crafting:4>], [null, <ic2:lapotron_crystal>|<ic2:lapotron_crystal:*>, null]]);
-	recipes.addShaped(<ic2:quantum_chestplate>, [[<ic2:crafting:3>, <ic2:lapotron_crystal>|<ic2:lapotron_crystal:*>, <ic2:crafting:3>],[<ic2:crafting:4>, <redstonearsenal:armor.plate_flux>.anyDamage(), <ic2:crafting:4>], [<ic2:crafting:3>, <ic2:jetpack_electric>.anyDamage(), <ic2:crafting:3>]]);
-	recipes.addShaped(<ic2:quantum_helmet>, [[<ic2:crafting:3>, null, <ic2:crafting:3>],[<ic2:crafting:4>, <redstonearsenal:armor.helmet_flux>.anyDamage(), <ic2:crafting:4>], [null, <ic2:lapotron_crystal>|<ic2:lapotron_crystal:*>, null]]);
+	# week4: quantum armor recipes replaced by week4/week4_uu.zs (solid UU instead of advanced alloy)
+	#recipes.addShaped(<ic2:quantum_boots>, [[null, null, null],[<ic2:crafting:4>, <redstonearsenal:armor.boots_flux>.anyDamage(), <ic2:crafting:4>], [<ic2:rubber_boots>, <ic2:lapotron_crystal>|<ic2:lapotron_crystal:*>, <ic2:rubber_boots>]]);
+	#recipes.addShaped(<ic2:quantum_leggings>, [[<ic2:crafting:3>, <ic2:lapotron_crystal>|<ic2:lapotron_crystal:*>, <ic2:crafting:3>],[<ic2:crafting:4>, <redstonearsenal:armor.legs_flux>.anyDamage(), <ic2:crafting:4>], [null, <ic2:lapotron_crystal>|<ic2:lapotron_crystal:*>, null]]);
+	#recipes.addShaped(<ic2:quantum_chestplate>, [[<ic2:crafting:3>, <ic2:lapotron_crystal>|<ic2:lapotron_crystal:*>, <ic2:crafting:3>],[<ic2:crafting:4>, <redstonearsenal:armor.plate_flux>.anyDamage(), <ic2:crafting:4>], [<ic2:crafting:3>, <ic2:jetpack_electric>.anyDamage(), <ic2:crafting:3>]]);
+	#recipes.addShaped(<ic2:quantum_helmet>, [[<ic2:crafting:3>, null, <ic2:crafting:3>],[<ic2:crafting:4>, <redstonearsenal:armor.helmet_flux>.anyDamage(), <ic2:crafting:4>], [null, <ic2:lapotron_crystal>|<ic2:lapotron_crystal:*>, null]]);
 			
 # *======= Mystical Agriculture Armor =======*
 

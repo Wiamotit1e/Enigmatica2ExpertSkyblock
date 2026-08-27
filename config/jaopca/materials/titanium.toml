@@ -2,7 +2,9 @@
 #Configurations for material Titanium.
 [general]
 	#The alternative names of this material.
-	alternativeNames = []
+	#Rutile maps to Titanium so JAOPCA registers the IC2 chain:
+	#macerator (rutile -> crushed) -> ore washer (purified) -> thermal centrifuge (dust)
+	alternativeNames = ["Rutile"]
 	#The byproducts of this material.
 	extras = []
 	#Is the storage block of this material small (2x2).

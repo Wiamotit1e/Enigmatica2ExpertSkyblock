@@ -551,7 +551,6 @@ for item in thaumcraftHintItems {
 		"immersiveengineering:metal_decoration0", "4",     "1600",
 		"immersiveengineering:metal_decoration0", "5",     "2500",
 		"mekanism:basicblock",                    "8",     "1750",
-		"mekanism:controlcircuit",                "3",     "1500",
 		"minecraft:cookie",                       "0",     "10",
 		"minecraft:skull",                        "1",     "5000",
 		"quark:crystal",                          "0",     "25",
@@ -576,7 +575,10 @@ for item in thaumcraftHintItems {
 			}
 		}
 	}
-	
+
+	# Solid UU-Matter: crystallized in the TE Transposer, melts back to 1000 mB UU
+	itemUtils.getItem("ic2:misc_resource", 3).addTooltip(format.darkPurple("Solidified UU-Matter - melt it in a smeltery to recover 1000 mB of liquid UU"));
+
 	<extrautils2:machine>.only(function(item){return !item.hasTag;})
 	.addTooltip(format.darkPurple("Can be replicated with ") ~ 
 					format.lightPurple(((450 as float) / 100) as string) ~ format.darkPurple(" mB UU"));
