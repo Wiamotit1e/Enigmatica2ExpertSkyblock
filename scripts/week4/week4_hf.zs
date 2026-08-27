@@ -27,6 +27,11 @@ import crafttweaker.item.IIngredient as IIngredient;
 #   pack's HF electrolysis, closing the triangle:
 #   fluorite -> HF -> (etch | electrolyze -> F2 -> fiber).
 #
+# The pack's old definitions for the advanced cells are commented out
+# of AppliedEnergistics.zs (the week4 convention: each recipe exists
+# exactly once). The re-added shapeless routes carry a W4 prefix so
+# the names never collide with the pack's.
+#
 # ######################################################################
 
 # ########################
@@ -52,7 +57,7 @@ function etchStandard(input as IIngredient, output as IItemStack) {
         [[<contenttweaker:etched_quartz_glass>, <ore:dustRedstone>, <contenttweaker:etched_quartz_glass>],
         [<ore:dustRedstone>, input, <ore:dustRedstone>],
         [<ore:plateIron>, <ironchest:iron_chest>, <ore:plateIron>]]);
-    recipes.addShapeless("Shapeless - " ~ output.displayName, output, [<appliedenergistics2:material:39>, input]);
+    recipes.addShapeless("W4 Shapeless - " ~ output.displayName, output, [<appliedenergistics2:material:39>, input]);
 }
 
 function etchPhysical(input as IIngredient, output as IItemStack) {
@@ -61,7 +66,7 @@ function etchPhysical(input as IIngredient, output as IItemStack) {
         [[<contenttweaker:etched_quartz_glass>, <appliedenergistics2:material:8>, <contenttweaker:etched_quartz_glass>],
         [<appliedenergistics2:material:8>, input, <appliedenergistics2:material:8>],
         [<ironchest:iron_chest:2>, <ironchest:iron_chest:2>, <ironchest:iron_chest:2>]]);
-    recipes.addShapeless("Shapeless - " ~ output.displayName, output, [<extracells:storage.casing>, input]);
+    recipes.addShapeless("W4 Shapeless - " ~ output.displayName, output, [<extracells:storage.casing>, input]);
 }
 
 function etchGas(input as IIngredient, output as IItemStack) {
@@ -70,7 +75,7 @@ function etchGas(input as IIngredient, output as IItemStack) {
         [[<contenttweaker:etched_quartz_glass>, <appliedenergistics2:material:8>, <contenttweaker:etched_quartz_glass>],
         [<appliedenergistics2:material:8>, input, <appliedenergistics2:material:8>],
         [<ore:plateGold>, <ironchest:iron_chest:1>, <ore:plateGold>]]);
-    recipes.addShapeless("Shapeless - " ~ output.displayName, output, [<extracells:storage.casing:2>, input]);
+    recipes.addShapeless("W4 Shapeless - " ~ output.displayName, output, [<extracells:storage.casing:2>, input]);
 }
 
 # ########################
