@@ -16,11 +16,10 @@ import crafttweaker.item.IIngredient as IIngredient;
 #   scale only circuits can feel. The NC fluid infuser is the one and
 #   only acid vessel: one machine, and the acid is the gate, so the
 #   bath runs deep (750 mB per glass);
-# - etched glass replaces quartz glass in every ADVANCED storage cell:
-#   AE2 item/fluid/spatial 16k+, ExtraCells physical cells, gas cells
-#   16k+, and the ThE essentia cells 16k+ (week4_thaumicenergistics.zs).
-#   Housings and basic cells keep plain glass - shells are plain,
-#   precision products are etched;
+# - etched glass replaces quartz glass in EVERY storage cell: AE2
+#   item/fluid/spatial cells, ExtraCells physical and gas cells, and
+#   the ThE essentia cells (week4_thaumicenergistics.zs). The storage
+#   housings keep plain glass - shells are plain, cells are etched;
 # - fluorinated glass: quartz glass bathed in fluorine becomes quartz
 #   fiber (appliedenergistics2:part:140, previously untouched), the
 #   real-world fluoride-glass fiber optic. Fluorine comes from the
@@ -79,30 +78,36 @@ function etchGas(input as IIngredient, output as IItemStack) {
 }
 
 # ########################
-# Advanced cells - etched glass
+# Storage cells - etched glass, every one of them
 # ########################
 
-# Item 16k/64k, fluid 16k/64k, spatial 16cubed/128cubed
+# Item 1k-64k, fluid 1k-64k, spatial 2cubed-128cubed, view cell
 val etchedCells = {
+    <appliedenergistics2:material:35>: <appliedenergistics2:storage_cell_1k>,
+    <appliedenergistics2:material:36>: <appliedenergistics2:storage_cell_4k>,
     <appliedenergistics2:material:37>: <appliedenergistics2:storage_cell_16k>,
     <appliedenergistics2:material:38>: <appliedenergistics2:storage_cell_64k>,
+    <appliedenergistics2:material:54>: <appliedenergistics2:fluid_storage_cell_1k>,
+    <appliedenergistics2:material:55>: <appliedenergistics2:fluid_storage_cell_4k>,
     <appliedenergistics2:material:56>: <appliedenergistics2:fluid_storage_cell_16k>,
     <appliedenergistics2:material:57>: <appliedenergistics2:fluid_storage_cell_64k>,
+    <appliedenergistics2:material:32>: <appliedenergistics2:spatial_storage_cell_2_cubed>,
     <appliedenergistics2:material:33>: <appliedenergistics2:spatial_storage_cell_16_cubed>,
-    <appliedenergistics2:material:34>: <appliedenergistics2:spatial_storage_cell_128_cubed>
+    <appliedenergistics2:material:34>: <appliedenergistics2:spatial_storage_cell_128_cubed>,
+    <ore:crystalCertus>: <appliedenergistics2:view_cell>
 } as IItemStack[IIngredient];
 
 for input, output in etchedCells {
     etchStandard(input, output);
 }
 
-# ExtraCells physical cells (256k and up) - the whole line is advanced
+# ExtraCells physical cells - the whole line
 for i in 0 .. 4 {
     etchPhysical(<extracells:storage.component>.definition.makeStack(i), <extracells:storage.physical>.definition.makeStack(i));
 }
 
-# ExtraCells gas cells 16k and up - 1k/4k keep plain glass
-for i in 2 .. 8 {
+# ExtraCells gas cells - the whole line
+for i in 0 .. 8 {
     etchGas(<extracells:storage.component>.definition.makeStack(i + 11), <extracells:storage.gas>.definition.makeStack(i));
 }
 

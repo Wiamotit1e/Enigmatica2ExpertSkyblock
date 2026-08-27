@@ -9,18 +9,18 @@
 # (AE2 storage housing + component, ThE's component2cell recipes)
 # stays untouched. The essentia components keep their original
 # arcane-crafted recipes.
-# week4 tier split: 1k/4k keep plain quartz glass, 16k/64k use the
-# HF-etched glass (week4/week4_hf.zs) like every advanced cell.
+# week4: every essentia cell uses the HF-etched glass
+# (week4/week4_hf.zs), like every other storage cell in the pack.
 
 recipes.remove(<thaumicenergistics:essentia_cell_1k>);
 recipes.addShaped("W4 Essentia Cell 1k", <thaumicenergistics:essentia_cell_1k>,
-    [[<appliedenergistics2:quartz_glass>, <ore:dustRedstone>, <appliedenergistics2:quartz_glass>],
+    [[<contenttweaker:etched_quartz_glass>, <ore:dustRedstone>, <contenttweaker:etched_quartz_glass>],
     [<ore:dustRedstone>, <thaumicenergistics:essentia_component_1k>, <ore:dustRedstone>],
     [<ore:plateIron>, <ironchest:iron_chest>, <ore:plateIron>]]);
 
 recipes.remove(<thaumicenergistics:essentia_cell_4k>);
 recipes.addShaped("W4 Essentia Cell 4k", <thaumicenergistics:essentia_cell_4k>,
-    [[<appliedenergistics2:quartz_glass>, <ore:dustRedstone>, <appliedenergistics2:quartz_glass>],
+    [[<contenttweaker:etched_quartz_glass>, <ore:dustRedstone>, <contenttweaker:etched_quartz_glass>],
     [<ore:dustRedstone>, <thaumicenergistics:essentia_component_4k>, <ore:dustRedstone>],
     [<ore:plateIron>, <ironchest:iron_chest>, <ore:plateIron>]]);
 

@@ -63,32 +63,32 @@ mods.actuallyadditions.Crusher.removeRecipe(<appliedenergistics2:material>);
   newGasCellRecipe(null, <extracells:storage.casing:2>);
 
 # ---=== Basic Cells ===---
-  val cellRecipes = {
-	# Standard Cells
-	<appliedenergistics2:material:35>: <appliedenergistics2:storage_cell_1k>,
-	<appliedenergistics2:material:36>: <appliedenergistics2:storage_cell_4k>,
-	# week4: 16k/64k moved to week4/week4_hf.zs (etched quartz glass)
-	#<appliedenergistics2:material:37>: <appliedenergistics2:storage_cell_16k>,
-	#<appliedenergistics2:material:38>: <appliedenergistics2:storage_cell_64k>,
-	# Fluid Cells
-	<appliedenergistics2:material:54>: <appliedenergistics2:fluid_storage_cell_1k>,
-	<appliedenergistics2:material:55>: <appliedenergistics2:fluid_storage_cell_4k>,
-	# week4: 16k/64k moved to week4/week4_hf.zs (etched quartz glass)
-	#<appliedenergistics2:material:56>: <appliedenergistics2:fluid_storage_cell_16k>,
-	#<appliedenergistics2:material:57>: <appliedenergistics2:fluid_storage_cell_64k>,
-	# Spatial Cells
-	<appliedenergistics2:material:32>: <appliedenergistics2:spatial_storage_cell_2_cubed>,
-	# week4: 16cubed/128cubed moved to week4/week4_hf.zs (etched quartz glass)
-	#<appliedenergistics2:material:33>: <appliedenergistics2:spatial_storage_cell_16_cubed>,
-	#<appliedenergistics2:material:34>: <appliedenergistics2:spatial_storage_cell_128_cubed>,
-	# View Cell
-	<ore:crystalCertus>: <appliedenergistics2:view_cell>
-
-	} as IItemStack[IIngredient];
-
-	for input, output in cellRecipes {
-		newCellRecipe(input,output);
-	}
+# week4: ALL cell recipes moved to week4/week4_hf.zs (etched quartz
+# glass for every storage cell). Only the storage housings stay here
+# (the newCellRecipe calls above).
+#  val cellRecipes = {
+#	# Standard Cells
+#	<appliedenergistics2:material:35>: <appliedenergistics2:storage_cell_1k>,
+#	<appliedenergistics2:material:36>: <appliedenergistics2:storage_cell_4k>,
+#	<appliedenergistics2:material:37>: <appliedenergistics2:storage_cell_16k>,
+#	<appliedenergistics2:material:38>: <appliedenergistics2:storage_cell_64k>,
+#	# Fluid Cells
+#	<appliedenergistics2:material:54>: <appliedenergistics2:fluid_storage_cell_1k>,
+#	<appliedenergistics2:material:55>: <appliedenergistics2:fluid_storage_cell_4k>,
+#	<appliedenergistics2:material:56>: <appliedenergistics2:fluid_storage_cell_16k>,
+#	<appliedenergistics2:material:57>: <appliedenergistics2:fluid_storage_cell_64k>,
+#	# Spatial Cells
+#	<appliedenergistics2:material:32>: <appliedenergistics2:spatial_storage_cell_2_cubed>,
+#	<appliedenergistics2:material:33>: <appliedenergistics2:spatial_storage_cell_16_cubed>,
+#	<appliedenergistics2:material:34>: <appliedenergistics2:spatial_storage_cell_128_cubed>,
+#	# View Cell
+#	<ore:crystalCertus>: <appliedenergistics2:view_cell>
+#
+#	} as IItemStack[IIngredient];
+#
+#	for input, output in cellRecipes {
+#		newCellRecipe(input,output);
+#	}
 
 # ---=== Advanced Cells ===---
 # week4: moved to week4/week4_hf.zs (etched quartz glass)
@@ -97,10 +97,10 @@ mods.actuallyadditions.Crusher.removeRecipe(<appliedenergistics2:material>);
 #  }
 
 # ---=== Gas Cells ===---
-# week4: 16k and up moved to week4/week4_hf.zs (etched quartz glass); 1k/4k stay here
-  for i in 0 .. 2 {
-    newGasCellRecipe(<extracells:storage.component>.definition.makeStack(i+11), <extracells:storage.gas>.definition.makeStack(i));
-  }
+# week4: moved to week4/week4_hf.zs (etched quartz glass)
+#  for i in 0 .. 7 {
+#    newGasCellRecipe(<extracells:storage.component>.definition.makeStack(i+11), <extracells:storage.gas>.definition.makeStack(i));
+#  }
 
 # ---=== High Tier Storage Components ===---
 	recipes.remove(<extracells:storage.component>);
