@@ -18,7 +18,7 @@ import crafttweaker.item.IIngredient as IIngredient;
 #   bath runs deep (750 mB per glass);
 # - etched glass replaces quartz glass in EVERY storage cell AND the
 #   storage housings: AE2 item/fluid/spatial cells, ExtraCells
-#   physical and gas cells, and the ThE essentia cells
+#   physical, gas and fluid cells, and the ThE essentia cells
 #   (week4_thaumicenergistics.zs). The housings are etched too -
 #   otherwise the shapeless housing route would bypass the acid bath
 #   entirely. No plain glass anywhere in the storage line;
@@ -79,6 +79,15 @@ function etchGas(input as IIngredient, output as IItemStack) {
     recipes.addShapeless("W4 Shapeless - " ~ output.displayName, output, [<extracells:storage.casing:2>, input]);
 }
 
+function etchFluid(input as IIngredient, output as IItemStack) {
+    recipes.remove(output);
+    recipes.addShaped("W4 Etched " ~ output.displayName, output,
+        [[<contenttweaker:etched_quartz_glass>, <appliedenergistics2:material:8>, <contenttweaker:etched_quartz_glass>],
+        [<appliedenergistics2:material:8>, input, <appliedenergistics2:material:8>],
+        [<ironchest:iron_chest>, <ironchest:iron_chest>, <ironchest:iron_chest>]]);
+    recipes.addShapeless("W4 Shapeless - " ~ output.displayName, output, [<extracells:storage.casing:1>, input]);
+}
+
 # ########################
 # Storage housings - etched glass, so the shapeless route stays honest
 # ########################
@@ -103,6 +112,15 @@ recipes.addShaped("W4 Etched Gas Housing", <extracells:storage.casing:2>,
     [[<contenttweaker:etched_quartz_glass>, <appliedenergistics2:material:8>, <contenttweaker:etched_quartz_glass>],
     [<appliedenergistics2:material:8>, null, <appliedenergistics2:material:8>],
     [<ore:plateGold>, <ironchest:iron_chest:1>, <ore:plateGold>]]);
+
+# Fluid cell housing
+recipes.remove(<extracells:storage.casing:1>);
+recipes.addShaped("W4 Etched Fluid Housing", <extracells:storage.casing:1>,
+    [[<contenttweaker:etched_quartz_glass>, <appliedenergistics2:material:8>, <contenttweaker:etched_quartz_glass>],
+    [<appliedenergistics2:material:8>, null, <appliedenergistics2:material:8>],
+    [<ironchest:iron_chest>, <ironchest:iron_chest>, <ironchest:iron_chest>]]);
+# The AE2-housing conversion dies with the removal above; restore it
+recipes.addShapeless("W4 Fluid Housing Conversion", <extracells:storage.casing:1>, [<appliedenergistics2:material:39>]);
 
 # ########################
 # Storage cells - etched glass, every one of them
@@ -137,6 +155,10 @@ for i in 0 .. 4 {
 for i in 0 .. 8 {
     etchGas(<extracells:storage.component>.definition.makeStack(i + 11), <extracells:storage.gas>.definition.makeStack(i));
 }
+
+# ExtraCells fluid cells - the 256k tier the pack kept visible
+# (1k-64k stay hidden, 1024k/4096k stay removed as non-functional)
+etchFluid(<extracells:storage.component:8>, <extracells:storage.fluid:4>);
 
 # Flavor
 <contenttweaker:etched_quartz_glass>.addTooltip("Acid-etched until the circuits can feel it.");
