@@ -147,12 +147,12 @@ for slab in <ore:slabWood>.items {
 	recipes.remove(<thermalexpansion:frame:128>);
 	mods.mekanism.infuser.addRecipe("REDSTONE", 400, <thermalexpansion:frame>, <thermalexpansion:frame:128>);
 
-# Machine Frame (week4: circuit substrate replaces the AA iron casing and one crystal)
+# Machine Frame
 	recipes.remove(<thermalexpansion:frame>);
 	mods.forestry.ThermionicFabricator.addCast(<thermalexpansion:frame> * 2,
 	[[<actuallyadditions:item_crystal:5>, <rftools:machine_frame>, <actuallyadditions:item_crystal:5>],
-	[<immersiveengineering:metal_decoration0:5>, <thermalexpansion:frame:64>, <contenttweaker:circuit_substrate>],
-	[<actuallyadditions:item_crystal:5>, <teslacorelib:machine_case>, <contenttweaker:circuit_substrate>]],
+	[<immersiveengineering:metal_decoration0:5>, <thermalexpansion:frame:64>, <actuallyadditions:block_misc:9>],
+	[<actuallyadditions:item_crystal:5>, <teslacorelib:machine_case>, <actuallyadditions:item_crystal:5>]],
 	<liquid:glass> * 6000);
 	
 # Removing craftable Bronze 

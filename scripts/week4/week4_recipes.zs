@@ -142,9 +142,6 @@ recipes.addShaped("W4 Time in a Bottle",
 [<ore:gemDiamond>, <minecraft:clock>, <ore:gemDiamond>],
 [<botania:manaresource:1>, <minecraft:glass_bottle>, <botania:manaresource:1>]]);
 
-# TE Machine Frame - changed directly in ThermalExpansion.zs (Thermionic
-# Fabricator casts cannot be overlaid: ModTweaker removals run before additions)
-
 # Mekanism Steel Casing (substrate replaces the osmium block columns)
 recipes.remove(<mekanism:basicblock:8>);
 recipes.addShaped("W4 Steel Casing",
@@ -188,14 +185,6 @@ recipes.addShapedMirrored("W4 Basic Capacitor",
 [[<contenttweaker:circuit_substrate>, <thermalfoundation:material:514>, <ore:dustBedrock>],
 [<thermalfoundation:material:514>, <immersiveengineering:metal_device0:2>, <thermalfoundation:material:514>],
 [<ore:dustBedrock>, <thermalfoundation:material:514>, <contenttweaker:circuit_substrate>]]);
-
-# Mekanism Advanced Circuit (substrate replaces the advanced alloy ring)
-recipes.remove(<mekanism:controlcircuit:1>);
-recipes.addShapedMirrored("W4 Advanced Circuit",
-<mekanism:controlcircuit:1>,
-[[<ore:alloyBasic>, <contenttweaker:circuit_substrate>, <ore:alloyBasic>],
-[<contenttweaker:circuit_substrate>, <ore:circuitBasic>, <contenttweaker:circuit_substrate>],
-[<ore:alloyBasic>, <contenttweaker:circuit_substrate>, <ore:alloyBasic>]]);
 
 # IF Fluiddictionary Converter (machine case + substrate replace iron ore)
 recipes.remove(<industrialforegoing:fluiddictionary_converter>);

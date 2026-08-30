@@ -240,13 +240,12 @@ for input, output in itemsToUnify {
 	[<thermalexpansion:frame>, <mekanism:robit>.anyDamage(), <thermalexpansion:frame>], 
 	[<mekanism:machineblock:11>, <computercraft:computer>.anyDamage(), <mekanism:machineblock:11>]]);
 
-# Advanced Circuit - week4: replaced by week4/week4_recipes.zs (W4 Advanced Circuit)
-#	recipes.remove(<mekanism:controlcircuit:1>);
-#	recipes.addShapedMirrored("Advanced Circuit",
-#	<mekanism:controlcircuit:1>,
-#	[[<ore:alloyBasic>, <ore:alloyAdvanced>, <ore:alloyBasic>],
-#	[<ore:alloyAdvanced>, <ore:circuitBasic>, <ore:alloyAdvanced>],
-#	[<ore:alloyBasic>, <ore:alloyAdvanced>, <ore:alloyBasic>]]);
+recipes.remove(<mekanism:controlcircuit:1>);
+recipes.addShapedMirrored("Advanced Circuit",
+<mekanism:controlcircuit:1>,
+[[<ore:alloyBasic>, <ore:alloyAdvanced>, <ore:alloyBasic>],
+[<ore:alloyAdvanced>, <ore:circuitBasic>, <ore:alloyAdvanced>],
+[<ore:alloyBasic>, <ore:alloyAdvanced>, <ore:alloyBasic>]]);
 
 # Elite Circuit - week4: replaced by week4/week4_recipes.zs (W4 Elite Circuit)
 #	recipes.remove(<mekanism:controlcircuit:2>);
