@@ -153,3 +153,11 @@ mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_machine_frame", m
 	.addItemInput(<actuallyadditions:item_crystal:5> * 4)
 	.build();
 	
+mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_machine_frame", machineName, 1)
+	.addItemOutput(<ic2:crafting:1> * 2)
+	.addEnergyPerTickInput(25000)
+	.addFluidInput(<liquid:glass> * 1000)
+	.addItemInput(<ic2:cable>.withTag({type: 0 as byte, insulation: 1 as byte}) * 6)
+	.addItemInput(<minecraft:redstone> * 2)
+	.addItemInput(<thermalfoundation:material:32>)
+	.build();
