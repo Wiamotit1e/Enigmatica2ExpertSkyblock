@@ -163,6 +163,15 @@ Infusion.registerRecipe("w4_speculative_processor", "INFUSION",
 <threng:material:4>, <threng:material:13>, <threng:material:4>,
 <threng:material:6>, <threng:material:4>, <threng:material:6>] as IIngredient[]);
 
+# ...or infused around a rainbow stone instead of the 64x speculation core
+Infusion.registerRecipe("w4_speculative_processor1", "INFUSION",
+<threng:material:14>, 25,
+[<aspect:cognitio> * 40, <aspect:vitium> * 20, <aspect:perditio> * 20, <aspect:praecantatio> * 20],
+<extrautils2:decorativesolid:8>,
+[<threng:material:6>, <threng:material:4>, <threng:material:6>,
+<threng:material:4>, <threng:material:13>, <threng:material:4>,
+<threng:material:6>, <threng:material:4>, <threng:material:6>] as IIngredient[]);
+
 # The lotteries moved to week4/week4_gambling.zs: throw a speculation
 # core on the ground and DETONATE it. In-world, server-side RNG, no
 # crafting grid, no re-rolls.
