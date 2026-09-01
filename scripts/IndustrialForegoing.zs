@@ -116,12 +116,12 @@ function fluidDict(ins as string[]) {
 	[<advancedrocketry:ic:3>, <storagedrawers:controller>, <advancedrocketry:ic:3>], 
 	[<mekanism:plasticblock:8>, <mekanism:plasticblock:8>, <mekanism:plasticblock:8>]]);
 	
-# Machine Case
+# Machine Case (x2)
 	recipes.remove(<teslacorelib:machine_case>);
 	recipes.addShaped("Tesla Core Lib Machine Case",
-	<teslacorelib:machine_case>, 
+	<teslacorelib:machine_case> * 2, 
 	[[<ic2:resource:11>, <ore:itemRubber>, <ic2:resource:11>],
-	[<ore:itemRubber>, <ic2:resource:13>, <ore:itemRubber>], 
+	[<ore:itemRubber>, <ic2:resource:13>, <ore:itemRubber>],
 	[<ic2:resource:11>, <ore:itemRubber>, <ic2:resource:11>]]);
 	
 # Mob Duplicator

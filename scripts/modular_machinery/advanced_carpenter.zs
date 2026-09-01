@@ -164,3 +164,28 @@ mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_wyvern_energy_cor
 	.addItemInput(<draconicevolution:draconic_core>)
 	.addFluidInput(<liquid:redstone> * 10000)
 	.build();
+
+# Hardened Casing (x2) - four resonating crystals set a Sturdy Casing in
+# 10 buckets of water. Machine twin of the Forestry Carpenter recipe in
+# week4/week4_recipes.zs.
+mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_hardened_machine1", machineName, 10)
+	.addEnergyPerTickInput(50000)
+	.addItemOutput(<forestry:hardened_machine> * 2)
+	.addItemInput(<forestry:sturdy_machine>)
+	.addItemInput(<threng:material:5> * 4)
+	.addFluidInput(<liquid:water> * 10000)
+	.build();
+
+# Wyvern Core (x2) - three draconic cores bound by a rainbow stone under
+# a shulker shell, with stellar alloy and pladium, bathed in mana. Machine
+# twin of the Forestry Carpenter recipe in week4/week4_recipes.zs.
+mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_wyvern_core1", machineName, 10)
+	.addEnergyPerTickInput(50000)
+	.addItemOutput(<draconicevolution:wyvern_core> * 2)
+	.addItemInput(<ore:shulkerShell>)
+	.addItemInput(<ore:ingotStellarAlloy>, 2)
+	.addItemInput(<environmentaltech:pladium>)
+	.addItemInput(<extrautils2:decorativesolid:8>)
+	.addItemInput(<draconicevolution:draconic_core> * 3)
+	.addFluidInput(<liquid:mana> * 1000)
+	.build();

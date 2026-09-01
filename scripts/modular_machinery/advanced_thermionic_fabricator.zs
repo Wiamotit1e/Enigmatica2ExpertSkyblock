@@ -161,3 +161,18 @@ mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_machine_frame", m
 	.addItemInput(<minecraft:redstone> * 2)
 	.addItemInput(<thermalfoundation:material:32>)
 	.build();
+
+# TE Machine Frame (x3) - empowered Enori crystals key the cast: RFTools
+# machine frame, heavy engineering block, iron casing and a machine case
+# into 12 buckets of glass. Machine twin of the Forestry ThermionicFabricator
+# cast in week4/week4_recipes.zs (which also wants a device frame).
+mods.modularmachinery.RecipeBuilder.newBuilder(machineName + "_machine_frame1", machineName, 30)
+	.addItemOutput(<thermalexpansion:frame> * 3)
+	.addEnergyPerTickInput(50000)
+	.addFluidInput(<liquid:glass> * 12000)
+	.addItemInput(<rftools:machine_frame>)
+	.addItemInput(<immersiveengineering:metal_decoration0:5>)
+	.addItemInput(<actuallyadditions:block_misc:9>)
+	.addItemInput(<teslacorelib:machine_case>)
+	.addItemInput(<actuallyadditions:item_crystal_empowered:5> * 4)
+	.build();

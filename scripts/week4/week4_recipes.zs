@@ -384,3 +384,84 @@ recipes.addShapedMirrored("W4 Quantum Link Chamber",
 # The titanium rework moved to week4/week4_titanium.zs: the full Kroll
 # line (crush -> chlorination -> reduction -> smelt) lives there, plus
 # the nugget-to-rutile-ore crafting swap.
+
+# ########################
+# Machine casing & frame lines
+# ########################
+
+# Tesla Core Lib Machine Case - the pack's rubber grid (IndustrialForegoing.zs)
+# with the rubber swapped for reinforced stone and HDPE sheets
+recipes.addShaped("W4 Tesla Core Lib Machine Case",
+	<teslacorelib:machine_case>, 
+	[[<ic2:resource:11>, <mekanism:polyethene:2>, <ic2:resource:11>],
+	[<mekanism:polyethene:2>, <ic2:resource:13>, <mekanism:polyethene:2>], 
+	[<ic2:resource:11>, <mekanism:polyethene:2>, <ic2:resource:11>]]
+);
+
+# NC Basic Plating (x6) - the pack's lead-shell grid with the graphite
+# core swapped for a beryllium block: the reactor-grade route
+recipes.addShapedMirrored("W4 Basic Plating - 1",
+	<nuclearcraft:part> * 6, 
+	[[<ore:blockSheetmetalLead>, <ic2:casing:4>, <ore:blockSheetmetalLead>],
+	[<ic2:casing:4>, <ore:blockBeryllium>, <ic2:casing:4>], 
+	[<ore:blockSheetmetalLead>, <ic2:casing:4>, <ore:blockSheetmetalLead>]]);
+
+# NC Basic Plating (x2) - same grid, quartzburnt core: the cheap route
+recipes.addShapedMirrored("W4 Basic Plating - 2",
+	<nuclearcraft:part> * 2, 
+	[[<ore:blockSheetmetalLead>, <ic2:casing:4>, <ore:blockSheetmetalLead>],
+	[<ic2:casing:4>, <extrautils2:decorativesolid:7>, <ic2:casing:4>], 
+	[<ore:blockSheetmetalLead>, <ic2:casing:4>, <ore:blockSheetmetalLead>]]
+);
+
+# NC Elite Plating (x2) - crystal binder and Boron-10 wrap a DU plating core
+recipes.addShapedMirrored("W4 Elite Plating",
+	<nuclearcraft:part:3> * 2, 
+	[[<nuclearcraft:compound:1>, <nuclearcraft:boron>, <nuclearcraft:compound:1>],
+	[<nuclearcraft:boron>, <nuclearcraft:part:2>, <nuclearcraft:boron>], 
+	[<nuclearcraft:compound:1>, <nuclearcraft:boron>, <nuclearcraft:compound:1>]]
+);
+
+# Forestry Sturdy Casing (x4) - a brass body braced by bronze and constantan gears
+recipes.addShapedMirrored("W4 Sturdy Casing",
+	<forestry:sturdy_machine> * 4, 
+	[[<ore:gearBronze>, <ore:ingotBrass>, <ore:gearBronze>],
+	[<ore:ingotBrass>, null, <ore:ingotBrass>], 
+	[<ore:gearConstantan>, <ore:ingotBrass>, <ore:gearConstantan>]]
+);
+
+# Carpenter: Hardened Casing (x2) - four resonating crystals set a Sturdy
+# Casing in 10 buckets of water. Machine twin of the MM advanced_carpenter
+# recipe.
+mods.forestry.Carpenter.addRecipe(
+	<forestry:hardened_machine> * 2,
+	[[<threng:material:5>, null, <threng:material:5>],
+	[null, <forestry:sturdy_machine>, null],
+	[<threng:material:5>, null, <threng:material:5>]], 
+	40,
+	<liquid:water> * 10000
+);
+
+# ThermionicFabricator: TE Machine Frame (x3) - empowered Enori crystals
+# key the cast: device frame, heavy engineering block, iron casing and a
+# machine case into 9 buckets of glass. Machine twin of the MM
+# advanced_thermionic_fabricator recipe.
+mods.forestry.ThermionicFabricator.addCast(
+	<thermalexpansion:frame> * 3,
+	[[<actuallyadditions:item_crystal_empowered:5>, <rftools:machine_frame>, <actuallyadditions:item_crystal_empowered:5>],
+	[<immersiveengineering:metal_decoration0:5>, <thermalexpansion:frame:64>, <actuallyadditions:block_misc:9>],
+	[<actuallyadditions:item_crystal_empowered:5>, <teslacorelib:machine_case>, <actuallyadditions:item_crystal_empowered:5>]],
+	<liquid:glass> * 9000
+);
+
+# Carpenter: Wyvern Core (x2) - three draconic cores bound by a rainbow
+# stone under a shulker shell, with stellar alloy and pladium, bathed in
+# mana. Machine twin of the MM advanced_carpenter recipe.
+mods.forestry.Carpenter.addRecipe(
+	<draconicevolution:wyvern_core> * 2,
+	[[<ore:shulkerShell>, <draconicevolution:draconic_core>, <ore:shulkerShell>],
+	[<draconicevolution:draconic_core>, <extrautils2:decorativesolid:8>, <draconicevolution:draconic_core>], 
+	[<ore:ingotStellarAlloy>, <environmentaltech:pladium>, <ore:ingotStellarAlloy>]], 
+	40,
+	<liquid:mana> * 2000
+);
