@@ -17,3 +17,6 @@ fluid.uu_solution.name=UU Solution
 
 item.contenttweaker.entropy_ash.name=Entropy Ash
 item.contenttweaker.entropy_core.name=Entropy Core
+item.contenttweaker.pride_flag.name=Pride Flag
+item.contenttweaker.pride_fuel.name=Pride Fuel
+item.contenttweaker.depleted_pride_fuel.name=Depleted Pride Fuel

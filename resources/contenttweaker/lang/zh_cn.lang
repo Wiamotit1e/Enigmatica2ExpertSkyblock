@@ -17,3 +17,6 @@ fluid.uu_solution.name=UU溶液
 
 item.contenttweaker.entropy_ash.name=熵烬
 item.contenttweaker.entropy_core.name=熵核
+item.contenttweaker.pride_flag.name=彩虹旗
+item.contenttweaker.pride_fuel.name=彩虹燃料
+item.contenttweaker.depleted_pride_fuel.name=枯竭彩虹燃料

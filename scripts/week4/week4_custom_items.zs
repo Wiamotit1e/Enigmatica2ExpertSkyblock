@@ -29,6 +29,9 @@ buildItem("fusion_catalyst");                # Fusion Catalyst, late game
 buildItem("titanium_sponge");                 # Titanium Sponge, Kroll-reduced titanium intermediate
 buildItem("entropy_ash");                     # Entropy Ash, trash ground into disorder
 buildItem("entropy_core");                    # Entropy Core, compressed and refined disorder
+buildItem("pride_flag");                      # Pride Flag, the whole pack in one rainbow
+buildItem("pride_fuel");                      # Pride Fuel, UU-matter pressed into rainbow
+buildItem("depleted_pride_fuel");             # Depleted Pride Fuel, burned-out pride that still dreams
 buildFluid("crude_life_essence", 0x752121);   # Crude Life Essence, stage 1 of the essence chain
 buildFluid("refined_life_essence", 0xC22B2B); # Refined Life Essence, stage 2 of the essence chain
 buildFluid("titanium_tetrachloride", 0xE8D9A3); # Titanium Tetrachloride, chlorinated rutile
