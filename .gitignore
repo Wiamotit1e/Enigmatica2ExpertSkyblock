@@ -1,4 +1,6 @@
 # Folders to ignore
+/.claude/
+/CLAUDE.md
 /journeymap/
 /dumps/
 /crash-reports/
@@ -775,3 +777,5 @@ OpenComputersMod-1.8.3-52-libjnlua52-windows-x86_64.dll
 OpenComputersMod-1.8.3-53-libjnlua53-windows-x86_64.dll
 OpenComputersMod-1.8.3-54-libjnlua54-windows-x86_64.dll
 config/AppliedEnergistics2/items.csv
+forge-installer.jar.log
+server_boot.log
