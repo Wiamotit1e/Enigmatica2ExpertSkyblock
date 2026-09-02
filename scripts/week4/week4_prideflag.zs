@@ -96,6 +96,15 @@ ExplosionCrafting.explodeItemRecipe(<extrautils2:decorativesolid:8> * 2, <conten
 ExplosionCrafting.explodeItemRecipe(<contenttweaker:anglesite> * 4, <contenttweaker:depleted_pride_fuel>, 80);
 ExplosionCrafting.explodeItemRecipe(<contenttweaker:benitoite> * 4, <contenttweaker:depleted_pride_fuel>, 80);
 
+# Destabilized Redstone Ore, 100%
+ExplosionCrafting.explodeItemRecipe(<thermalfoundation:ore_fluid:2> * 64, <contenttweaker:depleted_pride_fuel>, 100);
+
+# Energized Netherrack, 100%
+ExplosionCrafting.explodeItemRecipe(<thermalfoundation:ore_fluid:3> * 64, <contenttweaker:depleted_pride_fuel>, 100);
+
+# Resonant End Stone, 100%
+ExplosionCrafting.explodeItemRecipe(<thermalfoundation:ore_fluid:4> * 64, <contenttweaker:depleted_pride_fuel>, 100);
+
 # Ritual flavor
 <contenttweaker:pride_flag>.addTooltip("傲慢之罪");
 <contenttweaker:pride_fuel>.addTooltip("It burns in every colour.");

@@ -4,6 +4,7 @@ import mods.industrialforegoing.ProteinReactor;
 import mods.industrialforegoing.FluidDictionary;
 import mods.forestry.Carpenter;
 import mods.thaumcraft.Infusion;
+import mods.extendedcrafting.TableCrafting;
 import crafttweaker.item.IIngredient;
 
 # ######################################################################
@@ -464,4 +465,15 @@ mods.forestry.Carpenter.addRecipe(
 	[<ore:ingotStellarAlloy>, <environmentaltech:pladium>, <ore:ingotStellarAlloy>]], 
 	40,
 	<liquid:mana> * 2000
+);
+
+# Extended Crafting Table: Dragon's Breath (x4) - four enderium dusts
+# and four mana bottles crowd an end crystal; the crystal exhales the
+# dead dragon's lingering breath. The Fourth Cycle never fights the
+# dragon - it remembers it.
+TableCrafting.addShaped(
+	<minecraft:dragon_breath> * 4,
+	[[<ore:dustEnderium>, <botania:manabottle>, <ore:dustEnderium>],
+	[<botania:manabottle>, <minecraft:end_crystal>, <botania:manabottle>],
+	[<ore:dustEnderium>, <botania:manabottle>, <ore:dustEnderium>]]
 );

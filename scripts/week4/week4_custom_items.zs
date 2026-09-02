@@ -36,3 +36,4 @@ buildFluid("crude_life_essence", 0x752121);   # Crude Life Essence, stage 1 of t
 buildFluid("refined_life_essence", 0xC22B2B); # Refined Life Essence, stage 2 of the essence chain
 buildFluid("titanium_tetrachloride", 0xE8D9A3); # Titanium Tetrachloride, chlorinated rutile
 buildFluid("uu_solution", 0xA06BDE);            # UU Solution, dilithium dissolved in liquid UU
+buildFluid("liquid_air", 0xA9D0F5);           # Liquid Air, week4 air-chain hub: supercooler -> centrifuge (week4_supercooler.zs / week4_centrifuge.zs)
