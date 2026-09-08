@@ -1,10 +1,13 @@
 #priority -2
-#modloaded inworldcrafting
+#modloaded inworldcrafting bloodmagic
 
 import mods.thaumcraft.Infusion;
 import mods.nuclearcraft.fission;
+import mods.nuclearcraft.fuel_reprocessor;
 import mods.inworldcrafting.ExplosionCrafting;
 import crafttweaker.item.IIngredient;
+import mods.botania.RuneAltar;
+import mods.bloodmagic.BloodAltar;
 
 # ######################################################################
 #
@@ -26,10 +29,29 @@ import crafttweaker.item.IIngredient;
 # grab bag of machine frames, draconic cores and the pack's gate
 # materials. Every prize rolls its own chance, server-side RNG.
 #
+# The Aro Pride Flag is the mid-game sister: the Empowerer presses a
+# white empowered crystal between four mob skulls. The flag then
+# steadies two LEU-235 fuel blocks and two IC2 MOX cells into a single
+# Aro Pride Fuel - three times the power, two times the heat, half the
+# burn time of its parts. Burned out, the Fuel Reprocessor cracks the
+# spent rod back into two depleted LEU-235 and two depleted MOX: the
+# fuel comes home, spent but whole.
+#
+# The Pan Pride Flag bakes on a Botania rune altar from four HarvestCraft
+# pancakes (pan, get it?): eight flags per bake. Each flag then ferments
+# bonemeal into a heap of Enriched Bonemeal - a known sidestep of the
+# week4_recipes gate, kept because that recipe is cheap anyway.
+#
+# The Gay Men Pride Flag is the punchline: the blood altar both makes
+# and eats slates. This recipe waits there for the ethereal tier - 2 LP
+# at tier 0, drawn at 16 LP/t, no drain - and springs the moment the
+# slate finishes crafting. Take the slate out instantly, or the altar
+# converts the whole stack before you can blink.
+#
 # ######################################################################
 
 # ########################
-# The Pride Flag - one infusion. Idk how many pedestals
+# The Pride Flag - one infusion, twenty-five pedestals
 # ########################
 
 Infusion.registerRecipe("w4_pride_flag", "",
@@ -109,3 +131,98 @@ ExplosionCrafting.explodeItemRecipe(<thermalfoundation:ore_fluid:4> * 64, <conte
 <contenttweaker:pride_flag>.addTooltip("傲慢之罪");
 <contenttweaker:pride_fuel>.addTooltip("It burns in every colour.");
 <contenttweaker:depleted_pride_fuel>.addTooltip("The pride has burned out. Detonate the remains.");
+
+# ########################
+# Aro Pride Flag - mid game. The Empowerer presses a white empowered
+# crystal block between four mob skulls: skeleton, wither skeleton,
+# zombie, creeper (skull metas 0/1/2/4). 250k RF per stand, 600 ticks,
+# green particles. All five slots are consumed.
+# ########################
+
+mods.actuallyadditions.Empowerer.addRecipe(
+    <contenttweaker:aro_pride_flag>,
+    <actuallyadditions:block_crystal_empowered:5>,
+    <minecraft:skull:0>,
+    <minecraft:skull:1>,
+    <minecraft:skull:2>,
+    <minecraft:skull:4>,
+    250000,
+    600,
+    [0.1, 1.0, 0.1]
+);
+
+# ########################
+# Aro Pride Fuel - the flag steadies two LEU-235 fuel blocks and two
+# IC2 MOX cells into one rod. Same empowerer energy/time as the flag.
+# ########################
+
+mods.actuallyadditions.Empowerer.addRecipe(
+    <contenttweaker:aro_pride_fuel>,
+    <contenttweaker:aro_pride_flag>,
+    <nuclearcraft:fuel_uranium:4>,
+    <nuclearcraft:fuel_uranium:4>,
+    <ic2:nuclear:4>,
+    <ic2:nuclear:4>,
+    250000,
+    600,
+    [0.1, 1.0, 0.1]
+);
+
+# ########################
+# Fission - aro pride fuel burns down into the depleted form. Stat
+# blend of LEU-235 (72000t / 120 RF/t / 50 H/t) and the MOX cells
+# (98400t / 239 RF/t / 88 H/t): time LEU/2 + MOX/2 = 85200, power
+# LEU*3 + MOX*3 = 1077, heat LEU*2 + MOX*2 = 276. Doubles only - NC
+# silently falls back to 1/0/0 on ints.
+# ########################
+
+mods.nuclearcraft.fission.addRecipe(
+    [<contenttweaker:aro_pride_fuel>, <contenttweaker:depleted_aro_pride_fuel>, 85200.0, 1077.0, 276.0, "Aro Pride Fuel"]);
+
+# ########################
+# Fuel Reprocessor - the spent rod cracks back into its parts: two
+# depleted LEU-235, two depleted MOX (the IC2-mox derived rod), the
+# white iron crystal block it was pressed around, and four wither
+# skulls. The reprocessor has only four output slots, so same-type
+# returns stack into single slots - totals are unchanged per run.
+# ########################
+
+mods.nuclearcraft.fuel_reprocessor.addRecipe(
+    [<contenttweaker:depleted_aro_pride_fuel>,
+    <nuclearcraft:depleted_fuel_uranium:4> * 2,
+    <nuclearcraft:depleted_fuel_ic2:1> * 2,
+    <actuallyadditions:block_crystal:5>,
+    <minecraft:skull:1> * 4]);
+
+# ########################
+# Pan Pride Flag - the pancake joke pays out. Four HarvestCraft pancakes
+# bake into eight pan flags on a rune altar (50k mana). The flag then
+# ferments 2 bonemeal + sugar + rotten flesh into 64 Enriched Bonemeal.
+# Knowingly skips the week4_recipes gate - that recipe is cheap enough
+# that this only saves the fiddling. The pan flag is consumed.
+# ########################
+
+RuneAltar.addRecipe(<contenttweaker:pan_pride_flag> * 8,
+    [<harvestcraft:baconpancakesitem>,
+    <harvestcraft:maplesyruppancakesitem>,
+    <harvestcraft:blueberrypancakesitem>,
+    <harvestcraft:pancakesitem>] as IIngredient[],
+    50000);
+
+recipes.addShapeless("W4 Enriched Bonemeal With Pan",
+    <skyresources:baseitemcomponent:4> * 64,
+    [<minecraft:dye:15>, <minecraft:dye:15>, <minecraft:sugar>, <contenttweaker:pan_pride_flag>, <minecraft:rotten_flesh>]);
+
+<contenttweaker:pan_pride_flag>.addTooltip("Literally attracted to pan.");
+
+# ########################
+# Gay Men Pride Flag - the altar trap. Slates are made inside the blood
+# altar, and this recipe waits there for the ethereal tier: 2 LP, tier
+# 0, drawn at 16 LP/t, nothing drained. It springs the moment the slate
+# finishes crafting, so take yours out instantly - or the altar turns
+# the whole stack into flags before you can blink.
+# ########################
+
+BloodAltar.addRecipe(<contenttweaker:gay_men_pride_flag>, <bloodmagic:slate:4>, 0, 2, 16, 0);
+
+<contenttweaker:gay_men_pride_flag>.addTooltip("Don't worry. It's of no use.");
