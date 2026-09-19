@@ -547,6 +547,7 @@ for item in thaumcraftHintItems {
 		"ic2:nuclear",                            "7",     "2369",
 		"ic2:resource",                           "12",    "800",
 		"ic2:resource",                           "13",    "1600",
+		"libvulpes:productdust",                  "0",     "100",
 		"immersiveengineering:metal_decoration0", "3",     "950",
 		"immersiveengineering:metal_decoration0", "4",     "1600",
 		"immersiveengineering:metal_decoration0", "5",     "2500",

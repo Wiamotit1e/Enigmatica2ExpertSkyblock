@@ -1,8 +1,9 @@
-#modloaded ic2 appliedenergistics2 redstonearsenal libvulpes astralsorcery thaumcraft thermalexpansion botania
+#modloaded ic2 appliedenergistics2 redstonearsenal libvulpes astralsorcery thaumcraft thermalexpansion botania extendedcrafting
 #priority -2
 
 import mods.botania.RuneAltar;
 import mods.thermalexpansion.Transposer;
+import mods.extendedcrafting.CombinationCrafting;
 import crafttweaker.item.IIngredient;
 
 # ---=== Solid UU-Matter (ic2:misc_resource:3) ===---
@@ -15,6 +16,8 @@ import crafttweaker.item.IIngredient;
 #      (Rustic Evaporating Basin 50% chance, ID Drying Basin 75%,
 #      ID Mechanical Drying Basin 100%)
 # The melt-back below closes the loop 1:1.
+# A third path skips the solution entirely: five dilithium dust coalesce straight
+# into five solid UU in the Extended Crafting crafting core.
 #
 # Tech-magic crossovers:
 # - starlight forgery:    solid UU resonates into starmetal ore
@@ -32,6 +35,14 @@ scripts.process.evaporate(<liquid:uu_solution> * 1000, <ic2:misc_resource:3>, ""
 
 # Re-liquefaction: solid UU melts back into 1000 mB liquid UU
 scripts.process.melt(<ic2:misc_resource:3>, <liquid:ic2uu_matter> * 1000);
+
+# Direct coalescence: five dilithium dust fuse into five solid UU in the crafting core.
+# One dust in the core plus four on the pedestals - the pedestals are what actually
+# enforce the 5:5 ratio, since the core slot is matched by item only.
+CombinationCrafting.addRecipe(<ic2:misc_resource:3> * 5,
+    2000000000, 2000000000,
+    <libvulpes:productdust>,
+    [<libvulpes:productdust>, <libvulpes:productdust>, <libvulpes:productdust>, <libvulpes:productdust>]);
 
 # Starlight forgery: starlight resonates universal matter into starmetal
 # ORE - normally unmakable, space-gated to the AR dimensions in this skyblock.
