@@ -58124,6 +58124,1371 @@
           }
         }
       }
+    },
+    "784:10": {
+      "questID:3": 1580,
+      "preRequisites:11": [
+        1501
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_1",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Solar Flux",
+          "desc:8": "The pack\u0027s own solar ladder, rebuilt from the mirror up. Every tier sandwiches the previous panel around a different mod\u0027s machine, so the line tracks your progress instead of racing ahead of it. Twenty recipes, sixteen panels retuned - the top of the line pushes a trillion RF per tick."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_1",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "785:10": {
+      "questID:3": 1581,
+      "preRequisites:11": [
+        1580
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:mirror",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Mirror",
+          "desc:8": "Three panes of IC2 glass over Aluminium Plates and a Light Engineering Block. Every panel above is built out of these."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:mirror",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "786:10": {
+      "questID:3": 1582,
+      "preRequisites:11": [
+        1581
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_1",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Solar Panel I",
+          "desc:8": "Eight mirrors around a High Voltage Solar Array, banded with Component Heat Vents and an Iridium Reinforced Plate. Comes out sixty-four at a time."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_1",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "787:10": {
+      "questID:3": 1583,
+      "preRequisites:11": [
+        1582
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_2",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Solar Panel II",
+          "desc:8": "Eight Solar Panel I around an Iridium Neutron Reflector. The first tier that asks for real iridium."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_2",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "788:10": {
+      "questID:3": 1584,
+      "preRequisites:11": [
+        1583
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:photovoltaic_cell_1",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Photovoltaic Cell I",
+          "desc:8": "Mirrors, Advanced Heat Vents, a Simple Photovoltaic Cell and three Hardened Casings. From here on the odd-numbered panels are built from these instead of the tier below."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:photovoltaic_cell_1",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "789:10": {
+      "questID:3": 1585,
+      "preRequisites:11": [
+        1584
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_3",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Solar Panel III",
+          "desc:8": "Three Photovoltaic Cell I, Mana Diamonds and a Laser Lens wrapped around four Solar Panel II. Botania and Industrial Foregoing join the ladder."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_3",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "790:10": {
+      "questID:3": 1586,
+      "preRequisites:11": [
+        1585
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:photovoltaic_cell_2",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Photovoltaic Cell II",
+          "desc:8": "Cell I, an Environmental Tech Connector, a Solar Panel from Actually Additions and three Sea Lanterns."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:photovoltaic_cell_2",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "791:10": {
+      "questID:3": 1587,
+      "preRequisites:11": [
+        1586
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_4",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Solar Panel IV",
+          "desc:8": "Cells II and Empowered Palis Crystal around four Solar Panel III, bonded with Iron Casing."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_4",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "792:10": {
+      "questID:3": 1588,
+      "preRequisites:11": [
+        1587
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:photovoltaic_cell_3",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Photovoltaic Cell III",
+          "desc:8": "Cell II, Bioplastic, Manganese Ingots and NuclearCraft\u0027s Elite Solar Panel."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:photovoltaic_cell_3",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "793:10": {
+      "questID:3": 1589,
+      "preRequisites:11": [
+        1588
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_5",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Solar Panel V",
+          "desc:8": "Cells III around four Solar Panel IV, with Solidified UU-Matter on the flanks and an Elite Lithium Ion Battery in the middle. The UU economy starts paying for power here."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_5",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "794:10": {
+      "questID:3": 1590,
+      "preRequisites:11": [
+        1589
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:photovoltaic_cell_4",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Photovoltaic Cell IV",
+          "desc:8": "Cell III, Ethereal Glass, a Solar Panel from Extra Utilities and three Klein Bottles."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:photovoltaic_cell_4",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "795:10": {
+      "questID:3": 1591,
+      "preRequisites:11": [
+        1590
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_6",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Solar Panel VI",
+          "desc:8": "Cells IV around four Solar Panel V, lit by Tritium Lamps and an Opinium Core."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_6",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "796:10": {
+      "questID:3": 1592,
+      "preRequisites:11": [
+        1591
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:photovoltaic_cell_5",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Photovoltaic Cell V",
+          "desc:8": "Cell IV, an Aethium Solar Cell, Mana Infused Gears and Sky Stone Dust."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:photovoltaic_cell_5",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "797:10": {
+      "questID:3": 1593,
+      "preRequisites:11": [
+        1592
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_7",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Solar Panel VII",
+          "desc:8": "Cells V around four Solar Panel VI, braced with Litherite and a Tier 6 Lightning Controller."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_7",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "798:10": {
+      "questID:3": 1594,
+      "preRequisites:11": [
+        1593
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:photovoltaic_cell_6",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Photovoltaic Cell VI",
+          "desc:8": "Cell V, a Dragon Heart, an ME Molecular Assembler and Psigems. The last cell the ladder ever asks for."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:photovoltaic_cell_6",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "799:10": {
+      "questID:3": 1595,
+      "preRequisites:11": [
+        1594
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_8",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Solar Panel VIII",
+          "desc:8": "Cells VI around four Solar Panel VII, with Dragon\u0027s Breath and a Deep Dark Portal."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_8",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "800:10": {
+      "questID:3": 1596,
+      "preRequisites:11": [
+        1595
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_wyvern",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Wyvern Solar Panel",
+          "desc:8": "Three at a time on the 5x5 Extended Crafting table: Solar Panel VIII, Entropy Cores, EnderIO capacitors, blocks of Black Iron and a Draconium Capacitor. 760,000,000 RF/t."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_wyvern",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "801:10": {
+      "questID:3": 1597,
+      "preRequisites:11": [
+        1596
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_draconic",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Draconic Solar Panel",
+          "desc:8": "Three on the 7x7 table - Wyvern panels, Enhanced Ender Ingots, Wyvern Cores, Californium RTGs, Crystaltine Catalyst and blocks of Black Iron. 4,330,000,000 RF/t."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_draconic",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "802:10": {
+      "questID:3": 1598,
+      "preRequisites:11": [
+        1597
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_chaotic",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Chaotic Solar Panel",
+          "desc:8": "Four on the 9x9 table: Draconic panels, Benitoite, Anglesite, Stellar Energy Conduits, Chaotic Cores and a Draconic Reactor. 14,662,000,000 RF/t."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_chaotic",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "803:10": {
+      "questID:3": 1599,
+      "preRequisites:11": [
+        1598
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_neutronium",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Neutronium Solar Panel",
+          "desc:8": "Nine by nine again - Crystal Matrices, the Crafting Core, the Ultimate Catalyst, Thermal Expansion frames, Avaritia\u0027s Infinity Catalyst and a Pride Flag in the middle. 175,000,000,000 RF/t."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_neutronium",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
+    },
+    "804:10": {
+      "questID:3": 1600,
+      "preRequisites:11": [
+        1599
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "repeattime:3": -1,
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_infinity",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "partysinglereward:1": 0,
+          "autoclaim:1": 0,
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "ismain:1": 0,
+          "repeat_relative:1": 1,
+          "name:8": "Infinity Solar Panel",
+          "desc:8": "The end of the ladder: Infinity Ingots and Crystal Matrices from Avaritia, Tier 6 Void Ore and Void Resource Miners, Rainbow Generators, Creative Essence and Creative Storage Upgrades, wrapping the Neutronium panel. One trillion RF per tick."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "partialMatch:1": 1,
+          "autoConsume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "consume:1": 0,
+          "requiredItems:9": {
+            "0:10": {
+              "id:8": "solarflux:solar_panel_infinity",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:item",
+          "index:3": 0,
+          "rewards:9": {
+            "0:10": {
+              "id:8": "bq_standard:loot_chest",
+              "Count:3": 1,
+              "Damage:2": 101,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     }
   },
   "questLines:9": {
@@ -64097,6 +65462,174 @@
         }
       },
       "order:3": 22
+    },
+    "24:10": {
+      "quests:9": {
+        "0:10": {
+          "sizeX:3": 24,
+          "x:3": 264,
+          "y:3": -1408,
+          "id:3": 1580,
+          "sizeY:3": 24
+        },
+        "1:10": {
+          "sizeX:3": 24,
+          "x:3": 264,
+          "y:3": -1444,
+          "id:3": 1581,
+          "sizeY:3": 24
+        },
+        "2:10": {
+          "sizeX:3": 24,
+          "x:3": 264,
+          "y:3": -1480,
+          "id:3": 1582,
+          "sizeY:3": 24
+        },
+        "3:10": {
+          "sizeX:3": 24,
+          "x:3": 264,
+          "y:3": -1516,
+          "id:3": 1583,
+          "sizeY:3": 24
+        },
+        "4:10": {
+          "sizeX:3": 24,
+          "x:3": 264,
+          "y:3": -1552,
+          "id:3": 1584,
+          "sizeY:3": 24
+        },
+        "5:10": {
+          "sizeX:3": 24,
+          "x:3": 264,
+          "y:3": -1588,
+          "id:3": 1585,
+          "sizeY:3": 24
+        },
+        "6:10": {
+          "sizeX:3": 24,
+          "x:3": 264,
+          "y:3": -1624,
+          "id:3": 1586,
+          "sizeY:3": 24
+        },
+        "7:10": {
+          "sizeX:3": 24,
+          "x:3": 360,
+          "y:3": -1624,
+          "id:3": 1587,
+          "sizeY:3": 24
+        },
+        "8:10": {
+          "sizeX:3": 24,
+          "x:3": 360,
+          "y:3": -1588,
+          "id:3": 1588,
+          "sizeY:3": 24
+        },
+        "9:10": {
+          "sizeX:3": 24,
+          "x:3": 360,
+          "y:3": -1552,
+          "id:3": 1589,
+          "sizeY:3": 24
+        },
+        "10:10": {
+          "sizeX:3": 24,
+          "x:3": 360,
+          "y:3": -1516,
+          "id:3": 1590,
+          "sizeY:3": 24
+        },
+        "11:10": {
+          "sizeX:3": 24,
+          "x:3": 360,
+          "y:3": -1480,
+          "id:3": 1591,
+          "sizeY:3": 24
+        },
+        "12:10": {
+          "sizeX:3": 24,
+          "x:3": 360,
+          "y:3": -1444,
+          "id:3": 1592,
+          "sizeY:3": 24
+        },
+        "13:10": {
+          "sizeX:3": 24,
+          "x:3": 360,
+          "y:3": -1408,
+          "id:3": 1593,
+          "sizeY:3": 24
+        },
+        "14:10": {
+          "sizeX:3": 24,
+          "x:3": 456,
+          "y:3": -1408,
+          "id:3": 1594,
+          "sizeY:3": 24
+        },
+        "15:10": {
+          "sizeX:3": 24,
+          "x:3": 456,
+          "y:3": -1444,
+          "id:3": 1595,
+          "sizeY:3": 24
+        },
+        "16:10": {
+          "sizeX:3": 24,
+          "x:3": 456,
+          "y:3": -1480,
+          "id:3": 1596,
+          "sizeY:3": 24
+        },
+        "17:10": {
+          "sizeX:3": 24,
+          "x:3": 456,
+          "y:3": -1516,
+          "id:3": 1597,
+          "sizeY:3": 24
+        },
+        "18:10": {
+          "sizeX:3": 24,
+          "x:3": 456,
+          "y:3": -1552,
+          "id:3": 1598,
+          "sizeY:3": 24
+        },
+        "19:10": {
+          "sizeX:3": 24,
+          "x:3": 456,
+          "y:3": -1588,
+          "id:3": 1599,
+          "sizeY:3": 24
+        },
+        "20:10": {
+          "sizeX:3": 24,
+          "x:3": 456,
+          "y:3": -1624,
+          "id:3": 1600,
+          "sizeY:3": 24
+        }
+      },
+      "lineID:3": 24,
+      "properties:10": {
+        "betterquesting:10": {
+          "visibility:8": "NORMAL",
+          "icon:10": {
+            "id:8": "solarflux:solar_panel_1",
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": ""
+          },
+          "name:8": "Solar Flux",
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "Twenty recipes, sixteen panels, one ladder."
+        }
+      },
+      "order:3": 23
     }
   },
   "questSettings:10": {
